@@ -1,6 +1,6 @@
 {
   "wechat": {
-    "command": "npm",
-    "args": ["run", "--prefix", "${CLAUDE_PLUGIN_ROOT}", "--silent", "start"]
+    "command": "bun",
+    "args": ["run", "--cwd", "${CLAUDE_PLUGIN_ROOT}", "--shell=bun", "--silent", "start"]
   }
 }
