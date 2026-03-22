@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "weixin-claude-code",
+      "description": "微信 Channel for Claude Code — 通过 iLink Bot API 实现微信与 Claude Code 的双向消息通信",
+      "version": "0.1.0"
+    }
+  ]
+}
