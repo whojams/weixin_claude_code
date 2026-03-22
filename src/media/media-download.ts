@@ -143,3 +143,29 @@ export async function downloadMediaFromItem(
 
   return result;
 }
+
+/** 清理超过 24 小时的临时媒体文件 */
+export async function cleanupTempMedia(): Promise<void> {
+  const dirs = [
+    path.join(os.tmpdir(), "weixin-claude-code", "media", "inbound"),
+    path.join(os.tmpdir(), "weixin-claude-code", "media", "outbound"),
+  ];
+  const maxAge = 24 * 60 * 60 * 1000;
+  const now = Date.now();
+
+  for (const dir of dirs) {
+    try {
+      const entries = await fs.readdir(dir);
+      for (const entry of entries) {
+        const filePath = path.join(dir, entry);
+        const stat = await fs.stat(filePath);
+        if (now - stat.mtimeMs > maxAge) {
+          await fs.unlink(filePath);
+          logger.debug(`cleaned up temp file: ${filePath}`);
+        }
+      }
+    } catch {
+      // dir doesn't exist or no permission, skip
+    }
+  }
+}
