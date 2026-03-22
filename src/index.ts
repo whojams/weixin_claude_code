@@ -10,7 +10,7 @@ async function main() {
   logger.info("weixin-claude-code channel starting...");
 
   // 清理过期临时文件
-  await cleanupTempMedia().catch((err) =>
+  await cleanupTempMedia().catch((err: unknown) =>
     logger.warn(`temp cleanup failed: ${String(err)}`),
   );
 

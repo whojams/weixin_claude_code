@@ -2,17 +2,15 @@ import type { Server } from "@modelcontextprotocol/sdk/server/index.js";
 
 import { getUpdates } from "./api/api.js";
 import { WeixinConfigManager } from "./api/config-cache.js";
-import { SESSION_EXPIRED_ERRCODE, pauseSession, isSessionPaused } from "./api/session-guard.js";
+import { SESSION_EXPIRED_ERRCODE, pauseSession } from "./api/session-guard.js";
 import { getSyncBufFilePath, loadGetUpdatesBuf, saveGetUpdatesBuf } from "./storage/sync-buf.js";
 import { bodyFromItemList, setContextToken, isMediaItem } from "./messaging/inbound.js";
 import { downloadMediaFromItem } from "./media/media-download.js";
 import type { InboundMediaResult } from "./media/media-download.js";
 import type { WeixinMessage, MessageItem } from "./api/types.js";
 import { MessageItemType } from "./api/types.js";
-import { startTyping, stopTyping, setLastInboundAt, setPollLoopRunning } from "./mcp-server.js";
+import { startTyping, setLastInboundAt, setPollLoopRunning } from "./mcp-server.js";
 import { logger } from "./util/logger.js";
-import { sendTyping } from "./api/api.js";
-import { TypingStatus } from "./api/types.js";
 
 const DEFAULT_LONG_POLL_TIMEOUT_MS = 35_000;
 const MAX_CONSECUTIVE_FAILURES = 3;
