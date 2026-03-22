@@ -205,27 +205,17 @@ async function handleLogin() {
     return { content: [{ type: "text" as const, text: `登录失败: ${startResult.message}` }] };
   }
 
-  // 通过 channel notification 发送 ASCII 二维码（避免工具响应被折叠）
-  if (mcpServer) {
-    try {
-      const qrcodeterminal = await import("qrcode-terminal");
-      const qrAscii = await new Promise<string>((resolve) => {
-        qrcodeterminal.default.generate(startResult.qrcodeUrl!, { small: true }, (qr: string) => {
-          resolve(qr);
-        });
+  // 生成 ASCII 二维码放在 tool response 中（用户可 ctrl+o 展开）
+  let qrAscii = "";
+  try {
+    const qrcodeterminal = await import("qrcode-terminal");
+    qrAscii = await new Promise<string>((resolve) => {
+      qrcodeterminal.default.generate(startResult.qrcodeUrl!, { small: true }, (qr: string) => {
+        resolve(qr);
       });
-      if (qrAscii) {
-        await mcpServer.notification({
-          method: "notifications/claude/channel",
-          params: {
-            content: `请用微信扫描以下二维码登录:\n\n${qrAscii}\n链接: ${startResult.qrcodeUrl}`,
-            meta: { type: "qrcode" },
-          },
-        });
-      }
-    } catch {
-      // qrcode-terminal 不可用，回退到仅在工具响应中显示 URL
-    }
+    });
+  } catch {
+    // qrcode-terminal 不可用
   }
 
   // 后台轮询扫码状态
@@ -252,10 +242,14 @@ async function handleLogin() {
     }
   })().catch((err) => logger.error(`background login poll failed: ${String(err)}`));
 
+  const responseText = qrAscii
+    ? `请用微信扫描以下二维码登录（如被折叠请按 ctrl+o 展开）:\n\n${qrAscii}\n链接: ${startResult.qrcodeUrl}\n\n${startResult.message}`
+    : `${startResult.message}\n\n链接: ${startResult.qrcodeUrl}`;
+
   return {
     content: [{
       type: "text" as const,
-      text: `${startResult.message}\n\n链接: ${startResult.qrcodeUrl}`,
+      text: responseText,
     }],
   };
 }
