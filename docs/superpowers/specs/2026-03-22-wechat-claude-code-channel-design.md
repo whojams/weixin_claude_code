@@ -72,7 +72,7 @@ weixin_claw/
   - `auth/login-qr.ts` — 移除 `loadConfigRouteTag` 依赖；`qrcode-terminal` 输出重定向到 stderr（stdout 是 MCP 协议通道），或作为备用方案仅依赖 `qrcodeUrl` 返回值让 Claude 展示
   - `media/media-download.ts` — 将 `saveMediaBuffer` 回调替换为本地文件写入（`os.tmpdir()/weixin-claude-code/media/inbound/`）
   - `messaging/inbound.ts` — 简化，去掉 `MsgContext` 类型，保留消息解析和 `context_token` 缓存
-  - `messaging/send.ts` — 自行实现完整的 `markdownToPlainText`：vendor 版本先处理代码围栏/图片/链接/表格，最后调用 SDK 的 `stripMarkdown(result)` 做最终清理（去除 `**`、`*`、`~~`、`#` 等 Markdown 格式标记），新实现需将此逻辑内联，不依赖 SDK；移除 `ReplyPayload` 类型依赖
+  - `messaging/send.ts` — 从 `openclaw/src/line/markdown-to-line.ts` 复制原始 `stripMarkdown` 函数内联（替代 SDK import），`markdownToPlainText` 保持与 vendor 相同的调用链；移除 `ReplyPayload` 类型依赖，删除 `buildSendMessageReq` 透传函数
   - `storage/sync-buf.ts` — 从 vendor 的 `storage/sync-buf.ts` 适配，去除 legacy 兼容路径回退，存储路径改为 `~/.claude/channels/wechat/sync/`
   - `util/logger.ts` — 重写为 stderr 输出（stdout 是 MCP 协议通道）
 - **全新编写**：`index.ts`、`mcp-server.ts`、`poll-loop.ts`

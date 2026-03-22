@@ -41,17 +41,17 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "latest",
-    "qrcode-terminal": "latest",
-    "silk-wasm": "latest",
-    "zod": "latest"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/qrcode-terminal": "latest",
-    "typescript": "latest"
+    "qrcode-terminal": "0.12.0",
+    "zod": "4.3.6"
   }
 }
+```
+
+注意：`qrcode-terminal` 和 `zod` 版本与 vendor 的 `package.json` 保持一致。其余依赖通过 pnpm add 安装，使用安装时的最新版本：
+
+```bash
+pnpm add @modelcontextprotocol/sdk silk-wasm
+pnpm add -D typescript @types/node @types/qrcode-terminal
 ```
 
 - [ ] **Step 2: 创建 tsconfig.json**
@@ -85,14 +85,14 @@ dist/
 
 - [ ] **Step 4: 安装依赖**
 
-Run: `npm install`
-Expected: 成功安装所有依赖，生成 node_modules/ 和 package-lock.json
+Run: `pnpm install && pnpm add @modelcontextprotocol/sdk silk-wasm && pnpm add -D typescript @types/node @types/qrcode-terminal`
+Expected: 成功安装所有依赖，生成 node_modules/ 和 pnpm-lock.yaml
 
 - [ ] **Step 5: 提交**
 
 ```bash
-git add package.json tsconfig.json .gitignore package-lock.json
-git commit -m "chore: scaffold project with dependencies"
+git add package.json tsconfig.json .gitignore pnpm-lock.yaml
+git commit -m "chore: scaffold project with pnpm and dependencies"
 ```
 
 ---
@@ -548,7 +548,7 @@ git commit -m "feat: add media + CDN layer (mime, silk-transcode, media-download
 
 ### Task 6: 消息层（原 Task 7）（inbound + send + send-media）
 
-适配 `messaging/inbound.ts`（简化，去掉 MsgContext），适配 `messaging/send.ts`（内联 stripMarkdown），复制 `messaging/send-media.ts`。
+适配 `messaging/inbound.ts`（简化，去掉 MsgContext），适配 `messaging/send.ts`（从 openclaw 源码复制 `stripMarkdown` 内联），复制 `messaging/send-media.ts`。
 
 **Files:**
 - Create: `src/messaging/inbound.ts`
@@ -602,32 +602,41 @@ export function bodyFromItemList(itemList?: MessageItem[]): string {
 - 内联 `stripMarkdown` 逻辑到 `markdownToPlainText` 函数末尾：
 
 ```typescript
+/**
+ * 从 openclaw/src/line/markdown-to-line.ts 复制的原始 stripMarkdown 实现。
+ * 原代码通过 openclaw/plugin-sdk 导出，此处内联以避免依赖整个 SDK。
+ */
+function stripMarkdown(text: string): string {
+  let result = text;
+  result = result.replace(/\*\*(.+?)\*\*/g, "$1");
+  result = result.replace(/__(.+?)__/g, "$1");
+  result = result.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "$1");
+  result = result.replace(/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/g, "$1");
+  result = result.replace(/~~(.+?)~~/g, "$1");
+  result = result.replace(/^#{1,6}\s+(.+)$/gm, "$1");
+  result = result.replace(/^>\s?(.*)$/gm, "$1");
+  result = result.replace(/^[-*_]{3,}$/gm, "");
+  result = result.replace(/`([^`]+)`/g, "$1");
+  result = result.replace(/\n{3,}/g, "\n\n");
+  result = result.trim();
+  return result;
+}
+
+/**
+ * vendor 版 markdownToPlainText 先处理代码围栏/图片/链接/表格，
+ * 再调用 stripMarkdown 做最终清理。此处保持相同逻辑。
+ */
 export function markdownToPlainText(text: string): string {
   let result = text;
-  // 代码块：去除围栏，保留内容
   result = result.replace(/```[^\n]*\n?([\s\S]*?)```/g, (_, code: string) => code.trim());
-  // 图片：完全移除
   result = result.replace(/!\[[^\]]*\]\([^)]*\)/g, "");
-  // 链接：仅保留显示文本
   result = result.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1");
-  // 表格：移除分隔行，去除管道符
   result = result.replace(/^\|[\s:|-]+\|$/gm, "");
   result = result.replace(/^\|(.+)\|$/gm, (_, inner: string) =>
     inner.split("|").map((cell) => cell.trim()).join("  "),
   );
-  // 内联 stripMarkdown：去除剩余 Markdown 格式标记
-  result = result.replace(/^#{1,6}\s+/gm, "");       // 标题 #
-  result = result.replace(/\*\*(.+?)\*\*/g, "$1");    // 粗体 **
-  result = result.replace(/__(.+?)__/g, "$1");         // 粗体 __
-  result = result.replace(/\*(.+?)\*/g, "$1");         // 斜体 *
-  result = result.replace(/_(.+?)_/g, "$1");           // 斜体 _
-  result = result.replace(/~~(.+?)~~/g, "$1");         // 删除线 ~~
-  result = result.replace(/`([^`]+)`/g, "$1");         // 行内代码 `
-  result = result.replace(/^>\s?/gm, "");              // 引用 >
-  result = result.replace(/^[-*+]\s+/gm, "");          // 无序列表
-  result = result.replace(/^\d+\.\s+/gm, "");          // 有序列表
-  result = result.replace(/^---+$/gm, "");             // 水平线
-  return result.trim();
+  result = stripMarkdown(result);
+  return result;
 }
 ```
 
