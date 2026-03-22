@@ -10,7 +10,10 @@
     {
       "name": "weixin-claude-code",
       "description": "微信 Channel for Claude Code — 通过 iLink Bot API 实现微信与 Claude Code 的双向消息通信",
-      "source": ".",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Dcatfly/weixin_claude_code.git"
+      },
       "category": "channels"
     }
   ]
