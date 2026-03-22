@@ -1,11 +1,11 @@
 {
   "name": "weixin-claude-code",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "WeChat Channel for Claude Code via iLink Bot API",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "bun build src/index.ts --outfile dist/index.js --target bun",
     "start": "bun install --no-summary && bun dist/index.js",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
