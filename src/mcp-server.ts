@@ -211,7 +211,7 @@ async function handleLogin() {
     } else {
       logger.warn(`login failed: ${waitResult.message}`);
     }
-  })();
+  })().catch((err) => logger.error(`background login poll failed: ${String(err)}`));
 
   return {
     content: [{

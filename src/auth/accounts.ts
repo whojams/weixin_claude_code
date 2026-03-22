@@ -2,7 +2,6 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 
-import { logger } from "../util/logger.js";
 
 export const DEFAULT_BASE_URL = "https://ilinkai.weixin.qq.com";
 export const CDN_BASE_URL = "https://novac2c.cdn.weixin.qq.com/c2c";
@@ -162,6 +161,3 @@ export function resolveWeixinAccount(accountId: string): ResolvedWeixinAccount {
     userId: data?.userId?.trim() || undefined,
   };
 }
-
-// suppress unused import warning — logger may be used by callers via re-export pattern
-void logger;

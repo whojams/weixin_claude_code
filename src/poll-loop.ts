@@ -9,7 +9,7 @@ import { downloadMediaFromItem } from "./media/media-download.js";
 import type { InboundMediaResult } from "./media/media-download.js";
 import type { WeixinMessage, MessageItem } from "./api/types.js";
 import { MessageItemType } from "./api/types.js";
-import { startTyping, setLastInboundAt, setPollLoopRunning } from "./mcp-server.js";
+import { startTyping, stopTyping, setLastInboundAt, setPollLoopRunning } from "./mcp-server.js";
 import { logger } from "./util/logger.js";
 
 const DEFAULT_LONG_POLL_TIMEOUT_MS = 35_000;
@@ -68,6 +68,7 @@ export async function startPollLoop(opts: PollLoopOpts): Promise<void> {
 
         if (isSessionExpired) {
           pauseSession(accountId);
+          stopTyping(allowedUserId);
           setPollLoopRunning(false);
           aLog.error(`session expired, pausing poll-loop. Please re-login.`);
 
@@ -119,6 +120,7 @@ export async function startPollLoop(opts: PollLoopOpts): Promise<void> {
     }
   }
 
+  stopTyping(allowedUserId);
   setPollLoopRunning(false);
   aLog.info(`poll-loop ended`);
 }
