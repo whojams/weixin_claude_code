@@ -3,6 +3,7 @@ import {
   ListToolsRequestSchema,
   CallToolRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
+import { z } from "zod";
 
 import { getContextToken } from "./messaging/inbound.js";
 import { markdownToPlainText, sendMessageWeixin } from "./messaging/send.js";
@@ -69,6 +70,12 @@ export function setOnLoginSuccess(cb: (accountId: string) => void): void { onLog
 let pollAbortController: AbortController | undefined;
 export function setPollAbortController(ac: AbortController): void { pollAbortController = ac; }
 
+// 最近一次待处理的权限请求 ID（供 poll-loop 在用户仅回复 yes/no 时自动填充）
+// 当 Claude 通过 reply 工具发送消息时自动清理——说明 Agent 已继续工作，权限请求已结束
+let pendingPermissionRequestId: string | undefined;
+export function getPendingPermissionRequestId(): string | undefined { return pendingPermissionRequestId; }
+export function clearPendingPermissionRequestId(): void { pendingPermissionRequestId = undefined; }
+
 // 模块级 server 引用，供 handleLogin 发 notification
 let mcpServer: Server | undefined;
 
@@ -77,7 +84,10 @@ export function createMcpServer(): Server {
     { name: "wechat", version: "0.1.0" },
     {
       capabilities: {
-        experimental: { "claude/channel": {} },
+        experimental: {
+          "claude/channel": {},
+          "claude/channel/permission": {},
+        },
         tools: {},
       },
       instructions:
@@ -137,6 +147,47 @@ export function createMcpServer(): Server {
     throw new Error(`unknown tool: ${name}`);
   });
 
+  // 权限转发：Claude Code 在权限弹窗时发送 permission_request，channel 转发到微信
+  const PermissionRequestSchema = z.object({
+    method: z.literal("notifications/claude/channel/permission_request"),
+    params: z.object({
+      request_id: z.string(),
+      tool_name: z.string(),
+      description: z.string(),
+      input_preview: z.string(),
+    }),
+  });
+
+  server.setNotificationHandler(PermissionRequestSchema, async ({ params }) => {
+    const accountIds = listIndexedWeixinAccountIds();
+    if (accountIds.length === 0) return;
+    const account = resolveWeixinAccount(accountIds[0]);
+    if (!account.userId) return;
+
+    const contextToken = getContextToken(account.userId);
+    if (!contextToken) {
+      logger.warn("permission_request: no contextToken, cannot forward to WeChat");
+      return;
+    }
+
+    const text =
+      `Claude 请求执行 ${params.tool_name}:\n${params.description}\n` +
+      (params.input_preview ? `输入: ${params.input_preview}\n` : "") +
+      `\n回复 yes / no `;
+
+    try {
+      await sendMessageWeixin({
+        to: account.userId,
+        text,
+        opts: { baseUrl: account.baseUrl, token: account.token, contextToken },
+      });
+      // 仅在转发成功后缓存 request_id，避免用户未收到提示时 yes/no 被误拦截
+      pendingPermissionRequestId = params.request_id;
+    } catch (err) {
+      logger.error(`permission_request forward failed: ${String(err)}`);
+    }
+  });
+
   mcpServer = server;
   return server;
 }
@@ -155,8 +206,9 @@ async function handleReply(args: Record<string, string>) {
     return { content: [{ type: "text" as const, text: "未收到过该用户的消息，无法回复（缺少 context_token）" }] };
   }
 
-  // 取消 typing
+  // 取消 typing + 清理 pending 权限请求（Agent 已继续工作）
   stopTyping(chatId);
+  clearPendingPermissionRequestId();
 
   // 查找 account
   const accountIds = listIndexedWeixinAccountIds();

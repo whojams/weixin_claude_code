@@ -9,8 +9,13 @@ import { downloadMediaFromItem } from "./media/media-download.js";
 import type { InboundMediaResult } from "./media/media-download.js";
 import type { WeixinMessage, MessageItem } from "./api/types.js";
 import { MessageItemType } from "./api/types.js";
-import { startTyping, stopTyping, setLastInboundAt, setPollLoopRunning } from "./mcp-server.js";
+import { startTyping, stopTyping, setLastInboundAt, setPollLoopRunning, getPendingPermissionRequestId, clearPendingPermissionRequestId } from "./mcp-server.js";
 import { logger } from "./util/logger.js";
+
+// 匹配权限审批回复：
+// - 不带 ID："y", "yes", "n", "no"（使用缓存的 pending request_id）
+// - 带 ID："yes abcde", "no abcde"（[a-km-z] 是 Claude Code 的 ID 字母表，跳过 l）
+const PERMISSION_REPLY_RE = /^\s*(y|yes|n|no)(?:\s+([a-km-z]{5}))?\s*$/i;
 
 const DEFAULT_LONG_POLL_TIMEOUT_MS = 35_000;
 const MAX_CONSECUTIVE_FAILURES = 3;
@@ -152,6 +157,27 @@ async function processMessage(
     setContextToken(fromUserId, msg.context_token);
   }
 
+  // 权限审批回复拦截：匹配 "yes" / "no"（可选带 request_id）
+  const textBody = bodyFromItemList(msg.item_list);
+  const permMatch = PERMISSION_REPLY_RE.exec(textBody);
+  if (permMatch) {
+    // 优先使用消息中显式提供的 ID，否则使用缓存的 pending ID
+    const requestId = permMatch[2]?.toLowerCase() ?? getPendingPermissionRequestId();
+    if (requestId) {
+      await deps.server.notification({
+        method: "notifications/claude/channel/permission" as any,
+        params: {
+          request_id: requestId,
+          behavior: permMatch[1].toLowerCase().startsWith("y") ? "allow" : "deny",
+        },
+      });
+      // notification 成功后再清理，避免发送失败时状态丢失
+      clearPendingPermissionRequestId();
+      return; // 已处理为权限审批，不作为普通消息转发
+    }
+    // 没有 pending request_id 且消息中也没有 ID，fall through 作为普通消息
+  }
+
   // 下载媒体
   const mainMediaItem = findMediaItem(msg.item_list);
   const refMediaItem = !mainMediaItem ? findRefMediaItem(msg.item_list) : undefined;
@@ -172,7 +198,6 @@ async function processMessage(
   startTyping(fromUserId, deps.baseUrl, deps.token, cachedConfig.typingTicket);
 
   // 构建 notification
-  const textBody = bodyFromItemList(msg.item_list);
   const meta: Record<string, string> = {
     chat_id: fromUserId,
     sender: fromUserId,
