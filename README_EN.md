@@ -12,6 +12,7 @@ Ported from the communication layer of [`@tencent-weixin/openclaw-weixin`](https
 - Full media support: text, images, voice, video, files
 - QR code login, zero configuration
 - Replies automatically converted to plain text (WeChat doesn't render Markdown)
+- [Permission relay](https://code.claude.com/docs/en/channels-reference#relay-permission-prompts): tool-use approvals (e.g. Bash, Write, Edit) are forwarded to WeChat — reply yes/no to authorize remotely without being at the terminal
 
 ## Prerequisites
 
@@ -86,6 +87,7 @@ The plugin runs as an MCP Channel server, receiving WeChat messages via iLink Bo
 - **Manual re-login on session expiry** — when the WeChat session expires, you need to call `login` again
 - **Channel feature is in research preview** — requires `--dangerously-load-development-channels` flag
 - **Requires claude.ai login** — Console or API Key authentication not supported
+- **Plugin still starts in non-channel mode** — the MCP protocol provides no way for plugins to detect whether they are running in channel mode ([claude-code#36964](https://github.com/anthropics/claude-code/issues/36964)). If loaded as a regular MCP server, the plugin will still consume WeChat messages but notifications are silently discarded, causing subsequent channel-mode sessions to miss those messages. Only enable the plugin when needed
 
 ## Data Storage
 
@@ -99,6 +101,14 @@ Credentials and sync data are stored in `~/.claude/channels/wechat/`:
 ```
 
 All data is automatically cleared on logout.
+
+Media files (images, voice, video, documents) are cached in the system temp directory:
+
+```
+$TMPDIR/weixin-claude-code/media/
+├── inbound/     # received media
+└── outbound/    # sent media
+```
 
 ## License
 

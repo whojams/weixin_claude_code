@@ -12,6 +12,7 @@
 - 支持文本、图片、语音、视频、文件等全媒体类型
 - 微信扫码登录，零配置即用
 - Claude 回复自动转为纯文本（微信不支持 Markdown）
+- [权限转发](https://code.claude.com/docs/en/channels-reference#relay-permission-prompts)：Claude Code 的工具调用审批（如 Bash、Write、Edit）会转发到微信，直接回复 yes/no 即可远程授权，无需守在终端前
 
 ## 前置要求
 
@@ -86,6 +87,7 @@ claude --dangerously-load-development-channels plugin:weixin-claude-code@dcatfly
 - **Session 过期需手动重新登录** —— 微信 session 过期后需要重新调用 `login` 扫码
 - **Channel 功能处于研究预览阶段** —— 需要 `--dangerously-load-development-channels` 标志
 - **需要 claude.ai 登录** —— 不支持 Console 或 API Key 认证
+- **非 Channel 模式下插件仍然会启动** —— MCP 协议目前无法让插件检测自身是否运行在 channel 模式（[claude-code#36964](https://github.com/anthropics/claude-code/issues/36964)）。若以普通 MCP 模式加载，插件仍会消费微信消息但 notification 会被静默丢弃，导致后续 channel 模式会话丢失这些消息。建议仅在需要时启用此插件
 
 ## 数据存储
 
@@ -99,6 +101,14 @@ claude --dangerously-load-development-channels plugin:weixin-claude-code@dcatfly
 ```
 
 登出时所有数据会被自动清除。
+
+收发的媒体文件（图片、语音、视频、文件）缓存在系统临时目录下：
+
+```
+$TMPDIR/weixin-claude-code/media/
+├── inbound/     # 接收的媒体
+└── outbound/    # 发送的媒体
+```
 
 ## 许可证
 
