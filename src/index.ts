@@ -89,9 +89,19 @@ async function main() {
     if (msg.mediaPath) meta.media_path = msg.mediaPath;
     if (msg.mediaType) meta.media_type = msg.mediaType;
 
+    let content = msg.text;
+    if (msg.mediaPath) {
+      const mt = msg.mediaType ?? "";
+      const label = mt.startsWith("image") ? "图片"
+        : mt.startsWith("video") ? "视频"
+        : mt.startsWith("audio") ? "语音"
+        : mt ? "文件" : "媒体消息";
+      content = `[${label}: ${path.basename(msg.mediaPath)}]`;
+    }
+
     await server.notification({
       method: "notifications/claude/channel",
-      params: { content: msg.text || "[媒体消息]", meta },
+      params: { content, meta },
     });
   });
 

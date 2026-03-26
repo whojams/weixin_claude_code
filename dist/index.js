@@ -46,7 +46,7 @@ var __export = (target, all) => {
 var __esm = (fn, res) => () => (fn && (res = fn(fn = 0)), res);
 var __require = import.meta.require;
 
-// node_modules/silk-wasm/lib/index.mjs
+// ../weixin_bot_plugin/node_modules/.pnpm/silk-wasm@3.7.1/node_modules/silk-wasm/lib/index.mjs
 var exports_lib = {};
 __export(exports_lib, {
   isWav: () => isWav,
@@ -895,7 +895,7 @@ var init_lib = __esm(() => {
   wavFileTypeAudioEncodings = [0, 0, 0, 1];
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRMode.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRMode.js
 var require_QRMode = __commonJS((exports, module) => {
   module.exports = {
     MODE_NUMBER: 1 << 0,
@@ -905,7 +905,7 @@ var require_QRMode = __commonJS((exports, module) => {
   };
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QR8bitByte.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QR8bitByte.js
 var require_QR8bitByte = __commonJS((exports, module) => {
   var QRMode = require_QRMode();
   function QR8bitByte(data) {
@@ -925,7 +925,7 @@ var require_QR8bitByte = __commonJS((exports, module) => {
   module.exports = QR8bitByte;
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRMath.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRMath.js
 var require_QRMath = __commonJS((exports, module) => {
   var QRMath = {
     glog: function(n) {
@@ -961,7 +961,7 @@ var require_QRMath = __commonJS((exports, module) => {
   module.exports = QRMath;
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRPolynomial.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRPolynomial.js
 var require_QRPolynomial = __commonJS((exports, module) => {
   var QRMath = require_QRMath();
   function QRPolynomial(num, shift) {
@@ -1011,7 +1011,7 @@ var require_QRPolynomial = __commonJS((exports, module) => {
   module.exports = QRPolynomial;
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRMaskPattern.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRMaskPattern.js
 var require_QRMaskPattern = __commonJS((exports, module) => {
   module.exports = {
     PATTERN000: 0,
@@ -1025,7 +1025,7 @@ var require_QRMaskPattern = __commonJS((exports, module) => {
   };
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRUtil.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRUtil.js
 var require_QRUtil = __commonJS((exports, module) => {
   var QRMode = require_QRMode();
   var QRPolynomial = require_QRPolynomial();
@@ -1251,7 +1251,7 @@ var require_QRUtil = __commonJS((exports, module) => {
   module.exports = QRUtil;
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRErrorCorrectLevel.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRErrorCorrectLevel.js
 var require_QRErrorCorrectLevel = __commonJS((exports, module) => {
   module.exports = {
     L: 1,
@@ -1261,7 +1261,7 @@ var require_QRErrorCorrectLevel = __commonJS((exports, module) => {
   };
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRRSBlock.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRRSBlock.js
 var require_QRRSBlock = __commonJS((exports, module) => {
   var QRErrorCorrectLevel = require_QRErrorCorrectLevel();
   function QRRSBlock(totalCount, dataCount) {
@@ -1464,7 +1464,7 @@ var require_QRRSBlock = __commonJS((exports, module) => {
   module.exports = QRRSBlock;
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/QRBitBuffer.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/QRBitBuffer.js
 var require_QRBitBuffer = __commonJS((exports, module) => {
   function QRBitBuffer() {
     this.buffer = [];
@@ -1497,7 +1497,7 @@ var require_QRBitBuffer = __commonJS((exports, module) => {
   module.exports = QRBitBuffer;
 });
 
-// node_modules/qrcode-terminal/vendor/QRCode/index.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/vendor/QRCode/index.js
 var require_QRCode = __commonJS((exports, module) => {
   var QR8bitByte = require_QR8bitByte();
   var QRUtil = require_QRUtil();
@@ -1818,7 +1818,7 @@ var require_QRCode = __commonJS((exports, module) => {
   module.exports = QRCode;
 });
 
-// node_modules/qrcode-terminal/lib/main.js
+// ../weixin_bot_plugin/node_modules/.pnpm/qrcode-terminal@0.12.0/node_modules/qrcode-terminal/lib/main.js
 var require_main = __commonJS((exports, module) => {
   var QRCode = require_QRCode();
   var QRErrorCorrectLevel = require_QRErrorCorrectLevel();
@@ -5681,14 +5681,14 @@ var require_core = __commonJS((exports) => {
   };
   var MAX_EXPRESSION = 200;
   function requiredOptions(o) {
-    var _a2, _b, _c, _d, _e2, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t2, _u, _v, _w, _x, _y, _z, _0;
+    var _a2, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t2, _u, _v, _w, _x, _y, _z, _0;
     const s2 = o.strict;
     const _optz = (_a2 = o.code) === null || _a2 === undefined ? undefined : _a2.optimize;
     const optimize = _optz === true || _optz === undefined ? 1 : _optz || 0;
     const regExp = (_c = (_b = o.code) === null || _b === undefined ? undefined : _b.regExp) !== null && _c !== undefined ? _c : defaultRegExp;
     const uriResolver = (_d = o.uriResolver) !== null && _d !== undefined ? _d : uri_1.default;
     return {
-      strictSchema: (_f = (_e2 = o.strictSchema) !== null && _e2 !== undefined ? _e2 : s2) !== null && _f !== undefined ? _f : true,
+      strictSchema: (_f = (_e = o.strictSchema) !== null && _e !== undefined ? _e : s2) !== null && _f !== undefined ? _f : true,
       strictNumbers: (_h = (_g = o.strictNumbers) !== null && _g !== undefined ? _g : s2) !== null && _h !== undefined ? _h : true,
       strictTypes: (_k = (_j = o.strictTypes) !== null && _j !== undefined ? _j : s2) !== null && _k !== undefined ? _k : "log",
       strictTuples: (_m = (_l = o.strictTuples) !== null && _l !== undefined ? _l : s2) !== null && _m !== undefined ? _m : "log",
@@ -22844,67 +22844,65 @@ class StdioServerTransport {
   }
 }
 
-// node_modules/weixin-bot-plugin/dist/index.js
-import { EventEmitter as sn } from "events";
-import ht from "os";
-import wt from "path";
+// ../weixin_bot_plugin/dist/index.js
+import { EventEmitter as gn } from "events";
+import It from "os";
+import Tt from "path";
 import x from "fs";
-import Tt from "os";
-import E from "path";
+import R from "path";
+import Ut from "os";
+import vt from "path";
 import G from "fs";
-import v from "path";
-import kt from "os";
+import J from "path";
 import { randomUUID as Re } from "crypto";
-import Pt from "crypto";
-import Wt from "fs";
-import Be from "path";
-import { fileURLToPath as Lt } from "url";
-import Ke from "crypto";
-import Yt from "path";
-import Kt from "path";
-import pe from "crypto";
-import Ht from "fs/promises";
-import { createCipheriv as Jt, createDecipheriv as Xt } from "crypto";
-import S from "fs/promises";
-import w from "path";
-var xe = v.join(kt.homedir(), ".weixin-bot");
-function _e(e) {
-  xe = e;
+import Ft from "crypto";
+import Bt from "fs";
+import Fe from "path";
+import { fileURLToPath as Ot } from "url";
+import k from "fs";
+import Ke from "path";
+import Xe from "crypto";
+import rn from "path";
+import Ht from "path";
+import fe from "crypto";
+import nn from "fs/promises";
+import { createCipheriv as en, createDecipheriv as tn } from "crypto";
+import E from "fs/promises";
+import I from "path";
+var he = vt.join(Ut.homedir(), ".weixin-bot");
+function we(e) {
+  he = e;
 }
-function It() {
-  return v.join(xe, "sync");
+function _() {
+  return he;
 }
-function M(e) {
-  return v.join(It(), `${e}.sync.json`);
+function Mt() {
+  return J.join(_(), "sync");
 }
-function be(e) {
+function A(e) {
+  return J.join(Mt(), `${e}.sync.json`);
+}
+function ke(e) {
   try {
     let t = G.readFileSync(e, "utf-8"), n = JSON.parse(t);
     if (typeof n.get_updates_buf == "string")
       return n.get_updates_buf;
   } catch {}
 }
-function he(e, t) {
-  let n = v.dirname(e);
+function $e(e, t) {
+  let n = J.dirname(e);
   G.mkdirSync(n, { recursive: true }), G.writeFileSync(e, JSON.stringify({ get_updates_buf: t }, null, 0), "utf-8");
 }
-var J = "https://ilinkai.weixin.qq.com";
-var Ut = "https://novac2c.cdn.weixin.qq.com/c2c";
-var we = E.join(Tt.homedir(), ".weixin-bot");
-function $e(e) {
-  we = e;
-}
-function A() {
-  return we;
-}
-function ke(e) {
+var X = "https://ilinkai.weixin.qq.com";
+var Et = "https://novac2c.cdn.weixin.qq.com/c2c";
+function Ie(e) {
   return e.replace(/[@.]/g, "-");
 }
-function X() {
-  return E.join(A(), "accounts.json");
+function H() {
+  return R.join(_(), "accounts.json");
 }
-function h() {
-  let e = X();
+function w() {
+  let e = H();
   try {
     if (!x.existsSync(e))
       return [];
@@ -22914,36 +22912,36 @@ function h() {
     return [];
   }
 }
-function Ie(e) {
-  let t = A();
+function Te(e) {
+  let t = _();
   x.mkdirSync(t, { recursive: true });
-  let n = h();
+  let n = w();
   if (n.includes(e))
     return;
   let r = [...n, e];
-  x.writeFileSync(X(), JSON.stringify(r, null, 2), "utf-8");
+  x.writeFileSync(H(), JSON.stringify(r, null, 2), "utf-8");
 }
-function Te() {
-  return E.join(A(), "accounts");
+function Y() {
+  return R.join(_(), "accounts");
 }
-function H(e) {
-  return E.join(Te(), `${e}.json`);
+function Z(e) {
+  return R.join(Y(), `${e}.json`);
 }
-function St(e) {
+function At(e) {
   try {
     if (x.existsSync(e))
       return JSON.parse(x.readFileSync(e, "utf-8"));
   } catch {}
   return null;
 }
-function Ue(e) {
-  let t = St(H(e));
+function Se(e) {
+  let t = At(Z(e));
   return t || null;
 }
-function Se(e, t) {
-  let n = Te();
+function Ue(e, t) {
+  let n = Y();
   x.mkdirSync(n, { recursive: true });
-  let r = Ue(e) ?? {}, i = t.token?.trim() || r.token, o = t.baseUrl?.trim() || r.baseUrl, c = t.userId !== undefined ? t.userId.trim() || undefined : r.userId?.trim() || undefined, a = { ...i ? { token: i, savedAt: new Date().toISOString() } : {}, ...o ? { baseUrl: o } : {}, ...c ? { userId: c } : {} }, d = H(e);
+  let r = Se(e) ?? {}, i = t.token?.trim() || r.token, o = t.baseUrl?.trim() || r.baseUrl, c = t.userId !== undefined ? t.userId.trim() || undefined : r.userId?.trim() || undefined, a = { ...i ? { token: i, savedAt: new Date().toISOString() } : {}, ...o ? { baseUrl: o } : {}, ...c ? { userId: c } : {} }, d = Z(e);
   x.writeFileSync(d, JSON.stringify(a, null, 2), "utf-8");
   try {
     x.chmodSync(d, 384);
@@ -22951,62 +22949,68 @@ function Se(e, t) {
 }
 function ve(e) {
   try {
-    x.unlinkSync(H(e));
+    x.unlinkSync(Z(e));
   } catch {}
   try {
-    x.unlinkSync(M(e));
+    x.unlinkSync(R.join(Y(), `${e}.context-tokens.json`));
   } catch {}
-  let n = h().filter((i) => i !== e), r = A();
-  x.mkdirSync(r, { recursive: true }), x.writeFileSync(X(), JSON.stringify(n, null, 2), "utf-8");
+  try {
+    x.unlinkSync(A(e));
+  } catch {}
+  let n = w().filter((i) => i !== e), r = _();
+  x.mkdirSync(r, { recursive: true }), x.writeFileSync(H(), JSON.stringify(n, null, 2), "utf-8");
 }
 function Me(e) {
-  let t = Ue(e);
-  return { accountId: e, baseUrl: t?.baseUrl?.trim() || J, cdnBaseUrl: Ut, token: t?.token?.trim() || undefined, configured: !!t?.token?.trim(), userId: t?.userId?.trim() || undefined };
+  let t = Se(e);
+  return { accountId: e, baseUrl: t?.baseUrl?.trim() || X, cdnBaseUrl: Et, token: t?.token?.trim() || undefined, configured: !!t?.token?.trim(), userId: t?.userId?.trim() || undefined };
 }
 var Ae = process.env.LOG_LEVEL || "info";
 var Ee = { debug: 0, info: 1, warn: 2, error: 3 };
-function vt(e) {
+function Rt(e) {
   return Ee[e] >= Ee[Ae];
 }
-function b(e, t) {
-  if (!vt(e))
+function h(e, t) {
+  if (!Rt(e))
     return;
   let n = new Date().toISOString();
   process.stderr.write(`[${n}] [${e.toUpperCase()}] ${t}
 `);
 }
-var s = { debug: (e) => b("debug", e), info: (e) => b("info", e), warn: (e) => b("warn", e), error: (e) => b("error", e), setLevel: (e) => {
+var s = { debug: (e) => h("debug", e), info: (e) => h("info", e), warn: (e) => h("warn", e), error: (e) => h("error", e), setLevel: (e) => {
   Ae = e;
-}, withAccount: (e) => ({ debug: (t) => b("debug", `[${e}] ${t}`), info: (t) => b("info", `[${e}] ${t}`), warn: (t) => b("warn", `[${e}] ${t}`), error: (t) => b("error", `[${e}] ${t}`), getLogFilePath: () => "stderr" }) };
-function Mt(e, t) {
+}, withAccount: (e) => ({ debug: (t) => h("debug", `[${e}] ${t}`), info: (t) => h("info", `[${e}] ${t}`), warn: (t) => h("warn", `[${e}] ${t}`), error: (t) => h("error", `[${e}] ${t}`), getLogFilePath: () => "stderr" }) };
+function Pt(e, t) {
   return e ? e.length <= t ? e : `${e.slice(0, t)}\u2026(len=${e.length})` : "";
 }
-function R(e, t = 6) {
+function P(e, t = 6) {
   return e ? e.length <= t ? `****(len=${e.length})` : `${e.slice(0, t)}\u2026(len=${e.length})` : "(none)";
 }
-function Y(e, t = 200) {
-  return e ? e.length <= t ? e : `${e.slice(0, t)}\u2026(truncated, totalLen=${e.length})` : "(empty)";
+function ee(e, t = 200) {
+  if (!e)
+    return "(empty)";
+  let n = e.replace(/"(context_token|bot_token|token|authorization|Authorization)"\s*:\s*"[^"]*"/g, '"$1":"<redacted>"');
+  return n.length <= t ? n : `${n.slice(0, t)}\u2026(truncated, totalLen=${n.length})`;
 }
-function P(e) {
+function C(e) {
   try {
     let t = new URL(e), n = `${t.origin}${t.pathname}`;
     return t.search ? `${n}?<redacted>` : n;
   } catch {
-    return Mt(e, 80);
+    return Pt(e, 80);
   }
 }
-var Et = 5 * 60000;
+var Ct = 5 * 60000;
 var Pe = 35000;
-var L = "3";
-var _ = new Map;
-function Z(e) {
-  return Date.now() - e.startedAt < Et;
+var W = "3";
+var b = new Map;
+function te(e) {
+  return Date.now() - e.startedAt < Ct;
 }
-function At() {
-  for (let [e, t] of _)
-    Z(t) || _.delete(e);
+function Lt() {
+  for (let [e, t] of b)
+    te(t) || b.delete(e);
 }
-async function We(e, t) {
+async function Ce(e, t) {
   let n = e.endsWith("/") ? e : `${e}/`, r = new URL(`ilink/bot/get_bot_qrcode?bot_type=${encodeURIComponent(t)}`, n);
   s.info(`Fetching QR code from: ${r.toString()}`);
   let i = {}, o = await fetch(r.toString(), { headers: i });
@@ -23016,7 +23020,7 @@ async function We(e, t) {
   }
   return await o.json();
 }
-async function Rt(e, t) {
+async function Wt(e, t) {
   let n = e.endsWith("/") ? e : `${e}/`, r = new URL(`ilink/bot/get_qrcode_status?qrcode=${encodeURIComponent(t)}`, n);
   s.debug(`Long-poll QR status from: ${r.toString()}`);
   let i = { "iLink-App-ClientVersion": "1" }, o = new AbortController, c = setTimeout(() => o.abort(), Pe);
@@ -23035,33 +23039,33 @@ async function Rt(e, t) {
 }
 async function Le(e) {
   let t = e.accountId || Re();
-  At();
-  let n = _.get(t);
-  if (!e.force && n && Z(n) && n.qrcodeUrl)
+  Lt();
+  let n = b.get(t);
+  if (!e.force && n && te(n) && n.qrcodeUrl)
     return { qrcodeUrl: n.qrcodeUrl, message: "\u4E8C\u7EF4\u7801\u5DF2\u5C31\u7EEA\uFF0C\u8BF7\u4F7F\u7528\u5FAE\u4FE1\u626B\u63CF\u3002", sessionKey: t };
   try {
-    let r = e.botType || L;
+    let r = e.botType || W;
     if (s.info(`Starting Weixin login with bot_type=${r}`), !e.apiBaseUrl)
       return { message: "No baseUrl configured. Add channels.openclaw-weixin.baseUrl to your config before logging in.", sessionKey: t };
-    let i = await We(e.apiBaseUrl, r);
-    s.info(`QR code received, qrcode=${R(i.qrcode)} imgContentLen=${i.qrcode_img_content?.length ?? 0}`), s.info(`\u4E8C\u7EF4\u7801\u94FE\u63A5: ${i.qrcode_img_content}`);
+    let i = await Ce(e.apiBaseUrl, r);
+    s.info(`QR code received, qrcode=${P(i.qrcode)} imgContentLen=${i.qrcode_img_content?.length ?? 0}`), s.info(`\u4E8C\u7EF4\u7801\u94FE\u63A5: ${i.qrcode_img_content}`);
     let o = { sessionKey: t, id: Re(), qrcode: i.qrcode, qrcodeUrl: i.qrcode_img_content, startedAt: Date.now() };
-    return _.set(t, o), { qrcodeUrl: i.qrcode_img_content, message: "\u4F7F\u7528\u5FAE\u4FE1\u626B\u63CF\u4EE5\u4E0B\u4E8C\u7EF4\u7801\uFF0C\u4EE5\u5B8C\u6210\u8FDE\u63A5\u3002", sessionKey: t };
+    return b.set(t, o), { qrcodeUrl: i.qrcode_img_content, message: "\u4F7F\u7528\u5FAE\u4FE1\u626B\u63CF\u4EE5\u4E0B\u4E8C\u7EF4\u7801\uFF0C\u4EE5\u5B8C\u6210\u8FDE\u63A5\u3002", sessionKey: t };
   } catch (r) {
     return s.error(`Failed to start Weixin login: ${String(r)}`), { message: `Failed to start login: ${String(r)}`, sessionKey: t };
   }
 }
-var W = 3;
-async function Ce(e) {
-  let t = _.get(e.sessionKey);
+var L = 3;
+async function We(e) {
+  let t = b.get(e.sessionKey);
   if (!t)
     return s.warn(`waitForWeixinLogin: no active login sessionKey=${e.sessionKey}`), { connected: false, message: "\u5F53\u524D\u6CA1\u6709\u8FDB\u884C\u4E2D\u7684\u767B\u5F55\uFF0C\u8BF7\u5148\u53D1\u8D77\u767B\u5F55\u3002" };
-  if (!Z(t))
-    return s.warn(`waitForWeixinLogin: login QR expired sessionKey=${e.sessionKey}`), _.delete(e.sessionKey), { connected: false, message: "\u4E8C\u7EF4\u7801\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u751F\u6210\u3002" };
+  if (!te(t))
+    return s.warn(`waitForWeixinLogin: login QR expired sessionKey=${e.sessionKey}`), b.delete(e.sessionKey), { connected: false, message: "\u4E8C\u7EF4\u7801\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u751F\u6210\u3002" };
   let n = Math.max(e.timeoutMs ?? 480000, 1000), r = Date.now() + n, i = false, o = 1;
   for (s.info("Starting to poll QR code status...");Date.now() < r; ) {
     try {
-      let c = await Rt(e.apiBaseUrl, t.qrcode);
+      let c = await Wt(e.apiBaseUrl, t.qrcode);
       switch (s.debug(`pollQRStatus: status=${c.status} hasBotToken=${!!c.bot_token} hasBotId=${!!c.ilink_bot_id}`), t.status = c.status, c.status) {
         case "wait":
           e.verbose && s.debug("QR status poll...");
@@ -23070,68 +23074,68 @@ async function Ce(e) {
           i || (s.info("\u5DF2\u626B\u7801\uFF0C\u5728\u5FAE\u4FE1\u7EE7\u7EED\u64CD\u4F5C..."), i = true);
           break;
         case "expired": {
-          if (o++, o > W)
-            return s.warn(`waitForWeixinLogin: QR expired ${W} times, giving up sessionKey=${e.sessionKey}`), _.delete(e.sessionKey), { connected: false, message: "\u767B\u5F55\u8D85\u65F6\uFF1A\u4E8C\u7EF4\u7801\u591A\u6B21\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u5F00\u59CB\u767B\u5F55\u6D41\u7A0B\u3002" };
-          s.warn(`\u4E8C\u7EF4\u7801\u5DF2\u8FC7\u671F\uFF0C\u6B63\u5728\u5237\u65B0...(${o}/${W})`), s.info(`waitForWeixinLogin: QR expired, refreshing (${o}/${W})`);
+          if (o++, o > L)
+            return s.warn(`waitForWeixinLogin: QR expired ${L} times, giving up sessionKey=${e.sessionKey}`), b.delete(e.sessionKey), { connected: false, message: "\u767B\u5F55\u8D85\u65F6\uFF1A\u4E8C\u7EF4\u7801\u591A\u6B21\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u5F00\u59CB\u767B\u5F55\u6D41\u7A0B\u3002" };
+          s.warn(`\u4E8C\u7EF4\u7801\u5DF2\u8FC7\u671F\uFF0C\u6B63\u5728\u5237\u65B0...(${o}/${L})`), s.info(`waitForWeixinLogin: QR expired, refreshing (${o}/${L})`);
           try {
-            let a = e.botType || L, d = await We(e.apiBaseUrl, a);
-            t.qrcode = d.qrcode, t.qrcodeUrl = d.qrcode_img_content, t.startedAt = Date.now(), i = false, s.info(`waitForWeixinLogin: new QR code obtained qrcode=${R(d.qrcode)}`), s.info("\u65B0\u4E8C\u7EF4\u7801\u5DF2\u751F\u6210\uFF0C\u8BF7\u91CD\u65B0\u626B\u63CF"), e.onQrRefresh?.(d.qrcode_img_content);
+            let a = e.botType || W, d = await Ce(e.apiBaseUrl, a);
+            t.qrcode = d.qrcode, t.qrcodeUrl = d.qrcode_img_content, t.startedAt = Date.now(), i = false, s.info(`waitForWeixinLogin: new QR code obtained qrcode=${P(d.qrcode)}`), s.info("\u65B0\u4E8C\u7EF4\u7801\u5DF2\u751F\u6210\uFF0C\u8BF7\u91CD\u65B0\u626B\u63CF"), e.onQrRefresh?.(d.qrcode_img_content);
           } catch (a) {
-            return s.error(`waitForWeixinLogin: failed to refresh QR code: ${String(a)}`), _.delete(e.sessionKey), { connected: false, message: `\u5237\u65B0\u4E8C\u7EF4\u7801\u5931\u8D25: ${String(a)}` };
+            return s.error(`waitForWeixinLogin: failed to refresh QR code: ${String(a)}`), b.delete(e.sessionKey), { connected: false, message: `\u5237\u65B0\u4E8C\u7EF4\u7801\u5931\u8D25: ${String(a)}` };
           }
           break;
         }
         case "confirmed":
-          return c.ilink_bot_id ? (t.botToken = c.bot_token, _.delete(e.sessionKey), s.info(`Login confirmed! ilink_bot_id=${c.ilink_bot_id} ilink_user_id=${R(c.ilink_user_id)}`), { connected: true, botToken: c.bot_token, accountId: c.ilink_bot_id, baseUrl: c.baseurl, userId: c.ilink_user_id, message: "\u4E0E\u5FAE\u4FE1\u8FDE\u63A5\u6210\u529F\uFF01" }) : (_.delete(e.sessionKey), s.error("Login confirmed but ilink_bot_id missing from response"), { connected: false, message: "\u767B\u5F55\u5931\u8D25\uFF1A\u670D\u52A1\u5668\u672A\u8FD4\u56DE ilink_bot_id\u3002" });
+          return c.ilink_bot_id ? (t.botToken = c.bot_token, b.delete(e.sessionKey), s.info(`Login confirmed! ilink_bot_id=${c.ilink_bot_id} ilink_user_id=${P(c.ilink_user_id)}`), { connected: true, botToken: c.bot_token, accountId: c.ilink_bot_id, baseUrl: c.baseurl, userId: c.ilink_user_id, message: "\u4E0E\u5FAE\u4FE1\u8FDE\u63A5\u6210\u529F\uFF01" }) : (b.delete(e.sessionKey), s.error("Login confirmed but ilink_bot_id missing from response"), { connected: false, message: "\u767B\u5F55\u5931\u8D25\uFF1A\u670D\u52A1\u5668\u672A\u8FD4\u56DE ilink_bot_id\u3002" });
       }
     } catch (c) {
-      return s.error(`Error polling QR status: ${String(c)}`), _.delete(e.sessionKey), { connected: false, message: `Login failed: ${String(c)}` };
+      return s.error(`Error polling QR status: ${String(c)}`), b.delete(e.sessionKey), { connected: false, message: `Login failed: ${String(c)}` };
     }
     await new Promise((c) => setTimeout(c, 1000));
   }
-  return s.warn(`waitForWeixinLogin: timed out waiting for QR scan sessionKey=${e.sessionKey} timeoutMs=${n}`), _.delete(e.sessionKey), { connected: false, message: "\u767B\u5F55\u8D85\u65F6\uFF0C\u8BF7\u91CD\u8BD5\u3002" };
+  return s.warn(`waitForWeixinLogin: timed out waiting for QR scan sessionKey=${e.sessionKey} timeoutMs=${n}`), b.delete(e.sessionKey), { connected: false, message: "\u767B\u5F55\u8D85\u65F6\uFF0C\u8BF7\u91CD\u8BD5\u3002" };
 }
-var ee;
-function Fe(e) {
-  ee = e;
+var ne;
+function Be(e) {
+  ne = e;
 }
-function Ct() {
-  if (ee)
-    return ee;
+function Dt() {
+  if (ne)
+    return ne;
   try {
-    let e = Be.dirname(Lt(import.meta.url)), t = Be.resolve(e, "..", "..", "package.json");
-    return JSON.parse(Wt.readFileSync(t, "utf-8")).version ?? "unknown";
+    let e = Fe.dirname(Ot(import.meta.url)), t = Fe.resolve(e, "..", "..", "package.json");
+    return JSON.parse(Bt.readFileSync(t, "utf-8")).version ?? "unknown";
   } catch {
     return "unknown";
   }
 }
-var Bt = Ct();
-function $() {
-  return { channel_version: Bt };
+var qt = Dt();
+function T() {
+  return { channel_version: qt };
 }
-var Ft = 35000;
+var Nt = 35000;
 var Oe = 15000;
 var De = 1e4;
-function Ot(e) {
+function zt(e) {
   return e.endsWith("/") ? e : `${e}/`;
 }
-function Dt() {
-  let e = Pt.randomBytes(4).readUInt32BE(0);
+function jt() {
+  let e = Ft.randomBytes(4).readUInt32BE(0);
   return Buffer.from(String(e), "utf-8").toString("base64");
 }
-function qt(e) {
-  let t = { "Content-Type": "application/json", AuthorizationType: "ilink_bot_token", "Content-Length": String(Buffer.byteLength(e.body, "utf-8")), "X-WECHAT-UIN": Dt() };
+function Vt(e) {
+  let t = { "Content-Type": "application/json", AuthorizationType: "ilink_bot_token", "Content-Length": String(Buffer.byteLength(e.body, "utf-8")), "X-WECHAT-UIN": jt() };
   return e.token?.trim() && (t.Authorization = `Bearer ${e.token.trim()}`), s.debug(`requestHeaders: ${JSON.stringify({ ...t, Authorization: t.Authorization ? "Bearer ***" : undefined })}`), t;
 }
-async function k(e) {
-  let t = Ot(e.baseUrl), n = new URL(e.endpoint, t), r = qt({ token: e.token, body: e.body });
-  s.debug(`POST ${P(n.toString())} body=${Y(e.body)}`);
+async function S(e) {
+  let t = zt(e.baseUrl), n = new URL(e.endpoint, t), r = Vt({ token: e.token, body: e.body });
+  s.debug(`POST ${C(n.toString())} body=${ee(e.body)}`);
   let i = new AbortController, o = setTimeout(() => i.abort(), e.timeoutMs);
   try {
     let c = await fetch(n.toString(), { method: "POST", headers: r, body: e.body, signal: i.signal });
     clearTimeout(o);
     let a = await c.text();
-    if (s.debug(`${e.label} status=${c.status} raw=${Y(a)}`), !c.ok)
+    if (s.debug(`${e.label} status=${c.status} raw=${ee(a)}`), !c.ok)
       throw new Error(`${e.label} ${c.status}: ${a}`);
     return a;
   } catch (c) {
@@ -23139,9 +23143,9 @@ async function k(e) {
   }
 }
 async function qe(e) {
-  let t = e.timeoutMs ?? Ft;
+  let t = e.timeoutMs ?? Nt;
   try {
-    let n = await k({ baseUrl: e.baseUrl, endpoint: "ilink/bot/getupdates", body: JSON.stringify({ get_updates_buf: e.get_updates_buf ?? "", base_info: $() }), token: e.token, timeoutMs: t, label: "getUpdates" });
+    let n = await S({ baseUrl: e.baseUrl, endpoint: "ilink/bot/getupdates", body: JSON.stringify({ get_updates_buf: e.get_updates_buf ?? "", base_info: T() }), token: e.token, timeoutMs: t, label: "getUpdates" });
     return JSON.parse(n);
   } catch (n) {
     if (n instanceof Error && n.name === "AbortError")
@@ -23150,23 +23154,23 @@ async function qe(e) {
   }
 }
 async function Ne(e) {
-  let t = await k({ baseUrl: e.baseUrl, endpoint: "ilink/bot/getuploadurl", body: JSON.stringify({ filekey: e.filekey, media_type: e.media_type, to_user_id: e.to_user_id, rawsize: e.rawsize, rawfilemd5: e.rawfilemd5, filesize: e.filesize, thumb_rawsize: e.thumb_rawsize, thumb_rawfilemd5: e.thumb_rawfilemd5, thumb_filesize: e.thumb_filesize, no_need_thumb: e.no_need_thumb, aeskey: e.aeskey, base_info: $() }), token: e.token, timeoutMs: e.timeoutMs ?? Oe, label: "getUploadUrl" });
+  let t = await S({ baseUrl: e.baseUrl, endpoint: "ilink/bot/getuploadurl", body: JSON.stringify({ filekey: e.filekey, media_type: e.media_type, to_user_id: e.to_user_id, rawsize: e.rawsize, rawfilemd5: e.rawfilemd5, filesize: e.filesize, thumb_rawsize: e.thumb_rawsize, thumb_rawfilemd5: e.thumb_rawfilemd5, thumb_filesize: e.thumb_filesize, no_need_thumb: e.no_need_thumb, aeskey: e.aeskey, base_info: T() }), token: e.token, timeoutMs: e.timeoutMs ?? Oe, label: "getUploadUrl" });
   return JSON.parse(t);
 }
-async function te(e) {
-  await k({ baseUrl: e.baseUrl, endpoint: "ilink/bot/sendmessage", body: JSON.stringify({ ...e.body, base_info: $() }), token: e.token, timeoutMs: e.timeoutMs ?? Oe, label: "sendMessage" });
+async function ie(e) {
+  await S({ baseUrl: e.baseUrl, endpoint: "ilink/bot/sendmessage", body: JSON.stringify({ ...e.body, base_info: T() }), token: e.token, timeoutMs: e.timeoutMs ?? Oe, label: "sendMessage" });
 }
 async function ze(e) {
-  let t = await k({ baseUrl: e.baseUrl, endpoint: "ilink/bot/getconfig", body: JSON.stringify({ ilink_user_id: e.ilinkUserId, context_token: e.contextToken, base_info: $() }), token: e.token, timeoutMs: e.timeoutMs ?? De, label: "getConfig" });
+  let t = await S({ baseUrl: e.baseUrl, endpoint: "ilink/bot/getconfig", body: JSON.stringify({ ilink_user_id: e.ilinkUserId, context_token: e.contextToken, base_info: T() }), token: e.token, timeoutMs: e.timeoutMs ?? De, label: "getConfig" });
   return JSON.parse(t);
 }
-async function C(e) {
-  await k({ baseUrl: e.baseUrl, endpoint: "ilink/bot/sendtyping", body: JSON.stringify({ ...e.body, base_info: $() }), token: e.token, timeoutMs: e.timeoutMs ?? De, label: "sendTyping" });
+async function F(e) {
+  await S({ baseUrl: e.baseUrl, endpoint: "ilink/bot/sendtyping", body: JSON.stringify({ ...e.body, base_info: T() }), token: e.token, timeoutMs: e.timeoutMs ?? De, label: "sendTyping" });
 }
-var Nt = 1440 * 60 * 1000;
+var Kt = 1440 * 60 * 1000;
 var B = 2000;
-var zt = 3600 * 1000;
-var F = class {
+var Qt = 3600 * 1000;
+var O = class {
   constructor(t, n) {
     this.apiOpts = t;
     this.log = n;
@@ -23178,56 +23182,99 @@ var F = class {
       let c = false;
       try {
         let a = await ze({ baseUrl: this.apiOpts.baseUrl, token: this.apiOpts.token, ilinkUserId: t, contextToken: n });
-        a.ret === 0 && (this.cache.set(t, { config: { typingTicket: a.typing_ticket ?? "" }, everSucceeded: true, nextFetchAt: r + Math.random() * Nt, retryDelayMs: B }), this.log(`[weixin] config ${i?.everSucceeded ? "refreshed" : "cached"} for ${t}`), c = true);
+        a.ret === 0 && (this.cache.set(t, { config: { typingTicket: a.typing_ticket ?? "" }, everSucceeded: true, nextFetchAt: r + Math.random() * Kt, retryDelayMs: B }), this.log(`[weixin] config ${i?.everSucceeded ? "refreshed" : "cached"} for ${t}`), c = true);
       } catch (a) {
         this.log(`[weixin] getConfig failed for ${t} (ignored): ${String(a)}`);
       }
       if (!c) {
-        let a = i?.retryDelayMs ?? B, d = Math.min(a * 2, zt);
+        let a = i?.retryDelayMs ?? B, d = Math.min(a * 2, Qt);
         i ? (i.nextFetchAt = r + d, i.retryDelayMs = d) : this.cache.set(t, { config: { typingTicket: "" }, everSucceeded: false, nextFetchAt: r + B, retryDelayMs: B });
       }
     }
     return this.cache.get(t)?.config ?? { typingTicket: "" };
   }
 };
-var ne = -14;
-var ie = new Set;
-function O(e) {
-  ie.add(e), s.info(`session-guard: paused accountId=${e}, waiting for manual re-login`);
+var re = -14;
+var oe = new Set;
+function D(e) {
+  oe.add(e), s.info(`session-guard: paused accountId=${e}, waiting for manual re-login`);
 }
 function je(e) {
-  return ie.has(e);
+  return oe.has(e);
 }
 function Ve(e) {
-  ie.delete(e), s.info(`session-guard: reset accountId=${e}`);
+  oe.delete(e), s.info(`session-guard: reset accountId=${e}`);
 }
-var D = { IMAGE: 1, VIDEO: 2, FILE: 3, VOICE: 4 };
-var re = { NONE: 0, USER: 1, BOT: 2 };
+var q = { IMAGE: 1, VIDEO: 2, FILE: 3, VOICE: 4 };
+var se = { NONE: 0, USER: 1, BOT: 2 };
 var m = { NONE: 0, TEXT: 1, IMAGE: 2, VOICE: 3, FILE: 4, VIDEO: 5 };
-var oe = { NEW: 0, GENERATING: 1, FINISH: 2 };
-var q = { TYPING: 1, CANCEL: 2 };
-var se = new Map;
-function N(e, t) {
-  s.debug(`setContextToken: key=${e}`), se.set(e, t);
+var ae = { NEW: 0, GENERATING: 1, FINISH: 2 };
+var N = { TYPING: 1, CANCEL: 2 };
+var ce;
+var $ = new Map;
+function de(e) {
+  return Ke.join(_(), "accounts", `${e}.context-tokens.json`);
 }
-function I(e) {
-  let t = se.get(e);
-  return s.debug(`getContextToken: key=${e} found=${t !== undefined} storeSize=${se.size}`), t;
+function Gt() {
+  if (!ce)
+    return;
+  let e = de(ce);
+  try {
+    let t = Ke.dirname(e);
+    k.mkdirSync(t, { recursive: true });
+    let n = {};
+    for (let [r, i] of $)
+      n[r] = i;
+    k.writeFileSync(e, JSON.stringify(n, null, 0), "utf-8");
+  } catch (t) {
+    s.warn(`persistContextTokens: failed to write ${e}: ${String(t)}`);
+  }
 }
-function ae(e) {
+function Qe(e) {
+  ce = e;
+  let t = de(e);
+  try {
+    if (!k.existsSync(t))
+      return;
+    let n = k.readFileSync(t, "utf-8"), r = JSON.parse(n), i = 0;
+    for (let [o, c] of Object.entries(r))
+      typeof c == "string" && c && ($.set(o, c), i++);
+    s.info(`restoreContextTokens: restored ${i} tokens for account=${e}`);
+  } catch (n) {
+    s.warn(`restoreContextTokens: failed to read ${t}: ${String(n)}`);
+  }
+}
+function Ge(e) {
+  $.clear();
+  let t = de(e);
+  try {
+    k.existsSync(t) && k.unlinkSync(t);
+  } catch (n) {
+    s.warn(`clearContextTokensForAccount: failed to remove ${t}: ${String(n)}`);
+  }
+  s.info(`clearContextTokensForAccount: cleared tokens for account=${e}`);
+}
+function Je(e, t) {
+  s.debug(`setContextToken: key=${e}`), $.set(e, t), Gt();
+}
+function U(e) {
+  let t = $.get(e);
+  return s.debug(`getContextToken: key=${e} found=${t !== undefined} storeSize=${$.size}`), t;
+}
+function le(e) {
   return e.type === m.IMAGE || e.type === m.VIDEO || e.type === m.FILE || e.type === m.VOICE;
 }
-function ce(e) {
+function ge(e) {
   if (!e?.length)
     return "";
   for (let t of e) {
     if (t.type === m.TEXT && t.text_item?.text != null) {
       let n = String(t.text_item.text), r = t.ref_msg;
-      if (!r || r.message_item && ae(r.message_item))
+      if (!r || r.message_item && le(r.message_item))
         return n;
       let i = [];
       if (r.title && i.push(r.title), r.message_item) {
-        let o = ce([r.message_item]);
+        let o = ge([r.message_item]);
         o && i.push(o);
       }
       return i.length ? `[\u5F15\u7528: ${i.join(" | ")}]
@@ -23238,16 +23285,16 @@ ${n}` : n;
   }
   return "";
 }
-function Qe(e) {
-  return `${e}:${Date.now()}-${Ke.randomBytes(4).toString("hex")}`;
+function He(e) {
+  return `${e}:${Date.now()}-${Xe.randomBytes(4).toString("hex")}`;
 }
-function de(e, t) {
-  return `${e}-${Date.now()}-${Ke.randomBytes(4).toString("hex")}${t}`;
+function ue(e, t) {
+  return `${e}-${Date.now()}-${Xe.randomBytes(4).toString("hex")}${t}`;
 }
-function Ge(e = "weixin-bot") {
-  return Qe(e);
+function Ye(e = "weixin-bot") {
+  return He(e);
 }
-function jt(e) {
+function Jt(e) {
   let t = e;
   return t = t.replace(/\*\*(.+?)\*\*/g, "$1"), t = t.replace(/__(.+?)__/g, "$1"), t = t.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "$1"), t = t.replace(/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/g, "$1"), t = t.replace(/~~(.+?)~~/g, "$1"), t = t.replace(/^#{1,6}\s+(.+)$/gm, "$1"), t = t.replace(/^>\s?(.*)$/gm, "$1"), t = t.replace(/^[-*_]{3,}$/gm, ""), t = t.replace(/`([^`]+)`/g, "$1"), t = t.replace(/\n{3,}/g, `
 
@@ -23255,156 +23302,151 @@ function jt(e) {
 }
 function z2(e) {
   let t = e;
-  return t = t.replace(/```[^\n]*\n?([\s\S]*?)```/g, (n, r) => r.trim()), t = t.replace(/!\[[^\]]*\]\([^)]*\)/g, ""), t = t.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1"), t = t.replace(/^\|[\s:|-]+\|$/gm, ""), t = t.replace(/^\|(.+)\|$/gm, (n, r) => r.split("|").map((i) => i.trim()).join("  ")), t = jt(t), t;
+  return t = t.replace(/```[^\n]*\n?([\s\S]*?)```/g, (n, r) => r.trim()), t = t.replace(/!\[[^\]]*\]\([^)]*\)/g, ""), t = t.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1"), t = t.replace(/^\|[\s:|-]+\|$/gm, ""), t = t.replace(/^\|(.+)\|$/gm, (n, r) => r.split("|").map((i) => i.trim()).join("  ")), t = Jt(t), t;
 }
-function Vt(e) {
+function Xt(e) {
   let { to: t, text: n, contextToken: r, clientId: i } = e, o = n ? [{ type: m.TEXT, text_item: { text: n } }] : [];
-  return { msg: { from_user_id: "", to_user_id: t, client_id: i, message_type: re.BOT, message_state: oe.FINISH, item_list: o.length ? o : undefined, context_token: r ?? undefined } };
+  return { msg: { from_user_id: "", to_user_id: t, client_id: i, message_type: se.BOT, message_state: ae.FINISH, item_list: o.length ? o : undefined, context_token: r ?? undefined } };
 }
-async function Je(e) {
+async function Ze(e) {
   let { to: t, text: n, opts: r } = e;
-  if (!r.contextToken)
-    throw s.error(`sendMessageWeixin: contextToken missing, refusing to send to=${t}`), new Error("sendMessageWeixin: contextToken is required");
-  let i = Ge(r.clientIdPrefix), o = Vt({ to: t, text: n, contextToken: r.contextToken, clientId: i });
+  r.contextToken || s.warn(`sendMessageWeixin: contextToken missing for to=${t}, sending without context`);
+  let i = Ye(r.clientIdPrefix), o = Xt({ to: t, text: n, contextToken: r.contextToken, clientId: i });
   try {
-    await te({ baseUrl: r.baseUrl, token: r.token, timeoutMs: r.timeoutMs, body: o });
+    await ie({ baseUrl: r.baseUrl, token: r.token, timeoutMs: r.timeoutMs, body: o });
   } catch (c) {
     throw s.error(`sendMessageWeixin: failed to=${t} clientId=${i} err=${String(c)}`), c;
   }
   return { messageId: i };
 }
-async function le(e) {
+async function pe(e) {
   let { to: t, text: n, mediaItem: r, opts: i, label: o } = e, c = [];
   n && c.push({ type: m.TEXT, text_item: { text: n } }), c.push(r);
   let a = "";
   for (let d of c) {
-    a = Ge(i.clientIdPrefix);
-    let l = { msg: { from_user_id: "", to_user_id: t, client_id: a, message_type: re.BOT, message_state: oe.FINISH, item_list: [d], context_token: i.contextToken ?? undefined } };
+    a = Ye(i.clientIdPrefix);
+    let l = { msg: { from_user_id: "", to_user_id: t, client_id: a, message_type: se.BOT, message_state: ae.FINISH, item_list: [d], context_token: i.contextToken ?? undefined } };
     try {
-      await te({ baseUrl: i.baseUrl, token: i.token, timeoutMs: i.timeoutMs, body: l });
+      await ie({ baseUrl: i.baseUrl, token: i.token, timeoutMs: i.timeoutMs, body: l });
     } catch (g) {
       throw s.error(`${o}: failed to=${t} clientId=${a} err=${String(g)}`), g;
     }
   }
   return s.debug(`${o}: success to=${t} clientId=${a}`), { messageId: a };
 }
-async function Xe(e) {
+async function et(e) {
   let { to: t, text: n, uploaded: r, opts: i } = e;
-  if (!i.contextToken)
-    throw s.error(`sendImageMessageWeixin: contextToken missing, refusing to send to=${t}`), new Error("sendImageMessageWeixin: contextToken is required");
-  s.debug(`sendImageMessageWeixin: to=${t} filekey=${r.filekey} fileSize=${r.fileSize} aeskey=present`);
+  i.contextToken || s.warn(`sendImageMessageWeixin: contextToken missing for to=${t}, sending without context`), s.debug(`sendImageMessageWeixin: to=${t} filekey=${r.filekey} fileSize=${r.fileSize} aeskey=present`);
   let o = { type: m.IMAGE, image_item: { media: { encrypt_query_param: r.downloadEncryptedQueryParam, aes_key: Buffer.from(r.aeskey).toString("base64"), encrypt_type: 1 }, mid_size: r.fileSizeCiphertext } };
-  return le({ to: t, text: n, mediaItem: o, opts: i, label: "sendImageMessageWeixin" });
+  return pe({ to: t, text: n, mediaItem: o, opts: i, label: "sendImageMessageWeixin" });
 }
-async function He(e) {
+async function tt(e) {
   let { to: t, text: n, uploaded: r, opts: i } = e;
-  if (!i.contextToken)
-    throw s.error(`sendVideoMessageWeixin: contextToken missing, refusing to send to=${t}`), new Error("sendVideoMessageWeixin: contextToken is required");
+  i.contextToken || s.warn(`sendVideoMessageWeixin: contextToken missing for to=${t}, sending without context`);
   let o = { type: m.VIDEO, video_item: { media: { encrypt_query_param: r.downloadEncryptedQueryParam, aes_key: Buffer.from(r.aeskey).toString("base64"), encrypt_type: 1 }, video_size: r.fileSizeCiphertext } };
-  return le({ to: t, text: n, mediaItem: o, opts: i, label: "sendVideoMessageWeixin" });
+  return pe({ to: t, text: n, mediaItem: o, opts: i, label: "sendVideoMessageWeixin" });
 }
-async function Ye(e) {
+async function nt(e) {
   let { to: t, text: n, fileName: r, uploaded: i, opts: o } = e;
-  if (!o.contextToken)
-    throw s.error(`sendFileMessageWeixin: contextToken missing, refusing to send to=${t}`), new Error("sendFileMessageWeixin: contextToken is required");
+  o.contextToken || s.warn(`sendFileMessageWeixin: contextToken missing for to=${t}, sending without context`);
   let c = { type: m.FILE, file_item: { media: { encrypt_query_param: i.downloadEncryptedQueryParam, aes_key: Buffer.from(i.aeskey).toString("base64"), encrypt_type: 1 }, file_name: r, len: String(i.fileSize) } };
-  return le({ to: t, text: n, mediaItem: c, opts: o, label: "sendFileMessageWeixin" });
+  return pe({ to: t, text: n, mediaItem: c, opts: o, label: "sendFileMessageWeixin" });
 }
-var Qt = { ".pdf": "application/pdf", ".doc": "application/msword", ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", ".xls": "application/vnd.ms-excel", ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", ".ppt": "application/vnd.ms-powerpoint", ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation", ".txt": "text/plain", ".csv": "text/csv", ".zip": "application/zip", ".tar": "application/x-tar", ".gz": "application/gzip", ".mp3": "audio/mpeg", ".ogg": "audio/ogg", ".wav": "audio/wav", ".mp4": "video/mp4", ".mov": "video/quicktime", ".webm": "video/webm", ".mkv": "video/x-matroska", ".avi": "video/x-msvideo", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".gif": "image/gif", ".webp": "image/webp", ".bmp": "image/bmp" };
-var Gt = { "image/jpeg": ".jpg", "image/jpg": ".jpg", "image/png": ".png", "image/gif": ".gif", "image/webp": ".webp", "image/bmp": ".bmp", "video/mp4": ".mp4", "video/quicktime": ".mov", "video/webm": ".webm", "video/x-matroska": ".mkv", "video/x-msvideo": ".avi", "audio/mpeg": ".mp3", "audio/ogg": ".ogg", "audio/wav": ".wav", "application/pdf": ".pdf", "application/zip": ".zip", "application/x-tar": ".tar", "application/gzip": ".gz", "text/plain": ".txt", "text/csv": ".csv" };
+var Yt = { ".pdf": "application/pdf", ".doc": "application/msword", ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", ".xls": "application/vnd.ms-excel", ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", ".ppt": "application/vnd.ms-powerpoint", ".pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation", ".txt": "text/plain", ".csv": "text/csv", ".zip": "application/zip", ".tar": "application/x-tar", ".gz": "application/gzip", ".mp3": "audio/mpeg", ".ogg": "audio/ogg", ".wav": "audio/wav", ".mp4": "video/mp4", ".mov": "video/quicktime", ".webm": "video/webm", ".mkv": "video/x-matroska", ".avi": "video/x-msvideo", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".gif": "image/gif", ".webp": "image/webp", ".bmp": "image/bmp" };
+var Zt = { "image/jpeg": ".jpg", "image/jpg": ".jpg", "image/png": ".png", "image/gif": ".gif", "image/webp": ".webp", "image/bmp": ".bmp", "video/mp4": ".mp4", "video/quicktime": ".mov", "video/webm": ".webm", "video/x-matroska": ".mkv", "video/x-msvideo": ".avi", "audio/mpeg": ".mp3", "audio/ogg": ".ogg", "audio/wav": ".wav", "application/pdf": ".pdf", "application/zip": ".zip", "application/x-tar": ".tar", "application/gzip": ".gz", "text/plain": ".txt", "text/csv": ".csv" };
 function j(e) {
-  let t = Kt.extname(e).toLowerCase();
-  return Qt[t] ?? "application/octet-stream";
-}
-function Ze(e) {
-  let t = e.split(";")[0].trim().toLowerCase();
-  return Gt[t] ?? ".bin";
-}
-function et(e, t = ".jpg") {
-  return e.length < 4 ? t : e[0] === 255 && e[1] === 216 && e[2] === 255 ? ".jpg" : e[0] === 137 && e[1] === 80 && e[2] === 78 && e[3] === 71 ? ".png" : e[0] === 71 && e[1] === 73 && e[2] === 70 && e[3] === 56 ? ".gif" : e[0] === 66 && e[1] === 77 ? ".bmp" : e.length >= 12 && e[0] === 82 && e[1] === 73 && e[2] === 70 && e[3] === 70 && e[8] === 87 && e[9] === 69 && e[10] === 66 && e[11] === 80 ? ".webp" : t;
-}
-function tt(e, t) {
-  let n = Jt("aes-128-ecb", t, null);
-  return Buffer.concat([n.update(e), n.final()]);
-}
-function nt(e, t) {
-  let n = Xt("aes-128-ecb", t, null);
-  return Buffer.concat([n.update(e), n.final()]);
+  let t = Ht.extname(e).toLowerCase();
+  return Yt[t] ?? "application/octet-stream";
 }
 function it(e) {
+  let t = e.split(";")[0].trim().toLowerCase();
+  return Zt[t] ?? ".bin";
+}
+function rt(e, t = ".jpg") {
+  return e.length < 4 ? t : e[0] === 255 && e[1] === 216 && e[2] === 255 ? ".jpg" : e[0] === 137 && e[1] === 80 && e[2] === 78 && e[3] === 71 ? ".png" : e[0] === 71 && e[1] === 73 && e[2] === 70 && e[3] === 56 ? ".gif" : e[0] === 66 && e[1] === 77 ? ".bmp" : e.length >= 12 && e[0] === 82 && e[1] === 73 && e[2] === 70 && e[3] === 70 && e[8] === 87 && e[9] === 69 && e[10] === 66 && e[11] === 80 ? ".webp" : t;
+}
+function ot(e, t) {
+  let n = en("aes-128-ecb", t, null);
+  return Buffer.concat([n.update(e), n.final()]);
+}
+function st(e, t) {
+  let n = tn("aes-128-ecb", t, null);
+  return Buffer.concat([n.update(e), n.final()]);
+}
+function at(e) {
   return Math.ceil((e + 1) / 16) * 16;
 }
-function ge(e, t) {
+function me(e, t) {
   return `${t}/download?encrypted_query_param=${encodeURIComponent(e)}`;
 }
-function rt(e) {
+function ct(e) {
   return `${e.cdnBaseUrl}/upload?encrypted_query_param=${encodeURIComponent(e.uploadParam)}&filekey=${encodeURIComponent(e.filekey)}`;
 }
 var V = 3;
-async function ot(e) {
-  let { buf: t, uploadParam: n, filekey: r, cdnBaseUrl: i, label: o, aeskey: c } = e, a = tt(t, c), d = rt({ cdnBaseUrl: i, uploadParam: n, filekey: r });
-  s.debug(`${o}: CDN POST url=${P(d)} ciphertextSize=${a.length}`);
+async function dt(e) {
+  let { buf: t, uploadParam: n, filekey: r, cdnBaseUrl: i, label: o, aeskey: c } = e, a = ot(t, c), d = ct({ cdnBaseUrl: i, uploadParam: n, filekey: r });
+  s.debug(`${o}: CDN POST url=${C(d)} ciphertextSize=${a.length}`);
   let l, g;
-  for (let p = 1;p <= V; p++)
+  for (let u = 1;u <= V; u++)
     try {
-      let u = await fetch(d, { method: "POST", headers: { "Content-Type": "application/octet-stream" }, body: new Uint8Array(a) });
-      if (u.status >= 400 && u.status < 500) {
-        let y = u.headers.get("x-error-message") ?? await u.text();
-        throw s.error(`${o}: CDN client error attempt=${p} status=${u.status} errMsg=${y}`), new Error(`CDN upload client error ${u.status}: ${y}`);
+      let p = await fetch(d, { method: "POST", headers: { "Content-Type": "application/octet-stream" }, body: new Uint8Array(a) });
+      if (p.status >= 400 && p.status < 500) {
+        let y = p.headers.get("x-error-message") ?? await p.text();
+        throw s.error(`${o}: CDN client error attempt=${u} status=${p.status} errMsg=${y}`), new Error(`CDN upload client error ${p.status}: ${y}`);
       }
-      if (u.status !== 200) {
-        let y = u.headers.get("x-error-message") ?? `status ${u.status}`;
-        throw s.error(`${o}: CDN server error attempt=${p} status=${u.status} errMsg=${y}`), new Error(`CDN upload server error: ${y}`);
+      if (p.status !== 200) {
+        let y = p.headers.get("x-error-message") ?? `status ${p.status}`;
+        throw s.error(`${o}: CDN server error attempt=${u} status=${p.status} errMsg=${y}`), new Error(`CDN upload server error: ${y}`);
       }
-      if (l = u.headers.get("x-encrypted-param") ?? undefined, !l)
-        throw s.error(`${o}: CDN response missing x-encrypted-param header attempt=${p}`), new Error("CDN upload response missing x-encrypted-param header");
-      s.debug(`${o}: CDN upload success attempt=${p}`);
+      if (l = p.headers.get("x-encrypted-param") ?? undefined, !l)
+        throw s.error(`${o}: CDN response missing x-encrypted-param header attempt=${u}`), new Error("CDN upload response missing x-encrypted-param header");
+      s.debug(`${o}: CDN upload success attempt=${u}`);
       break;
-    } catch (u) {
-      if (g = u, u instanceof Error && u.message.includes("client error"))
-        throw u;
-      p < V ? s.error(`${o}: attempt ${p} failed, retrying... err=${String(u)}`) : s.error(`${o}: all ${V} attempts failed err=${String(u)}`);
+    } catch (p) {
+      if (g = p, p instanceof Error && p.message.includes("client error"))
+        throw p;
+      u < V ? s.error(`${o}: attempt ${u} failed, retrying... err=${String(p)}`) : s.error(`${o}: all ${V} attempts failed err=${String(p)}`);
     }
   if (!l)
     throw g instanceof Error ? g : new Error(`CDN upload failed after ${V} attempts`);
   return { downloadParam: l };
 }
-async function ue(e) {
-  let { filePath: t, toUserId: n, opts: r, cdnBaseUrl: i, mediaType: o, label: c } = e, a = await Ht.readFile(t), d = a.length, l = pe.createHash("md5").update(a).digest("hex"), g = it(d), p = pe.randomBytes(16).toString("hex"), u = pe.randomBytes(16);
-  s.debug(`${c}: file=${t} rawsize=${d} filesize=${g} md5=${l} filekey=${p}`);
-  let y = await Ne({ ...r, filekey: p, media_type: o, to_user_id: n, rawsize: d, rawfilemd5: l, filesize: g, no_need_thumb: true, aeskey: u.toString("hex") }), f = y.upload_param;
+async function ye(e) {
+  let { filePath: t, toUserId: n, opts: r, cdnBaseUrl: i, mediaType: o, label: c } = e, a = await nn.readFile(t), d = a.length, l = fe.createHash("md5").update(a).digest("hex"), g = at(d), u = fe.randomBytes(16).toString("hex"), p = fe.randomBytes(16);
+  s.debug(`${c}: file=${t} rawsize=${d} filesize=${g} md5=${l} filekey=${u}`);
+  let y = await Ne({ ...r, filekey: u, media_type: o, to_user_id: n, rawsize: d, rawfilemd5: l, filesize: g, no_need_thumb: true, aeskey: p.toString("hex") }), f = y.upload_param;
   if (!f)
     throw s.error(`${c}: getUploadUrl returned no upload_param, resp=${JSON.stringify(y)}`), new Error(`${c}: getUploadUrl returned no upload_param`);
-  let { downloadParam: fe } = await ot({ buf: a, uploadParam: f, filekey: p, cdnBaseUrl: i, aeskey: u, label: `${c}[orig filekey=${p}]` });
-  return { filekey: p, downloadEncryptedQueryParam: fe, aeskey: u.toString("hex"), fileSize: d, fileSizeCiphertext: g };
+  let { downloadParam: be } = await dt({ buf: a, uploadParam: f, filekey: u, cdnBaseUrl: i, aeskey: p, label: `${c}[orig filekey=${u}]` });
+  return { filekey: u, downloadEncryptedQueryParam: be, aeskey: p.toString("hex"), fileSize: d, fileSizeCiphertext: g };
 }
-async function st(e) {
-  return ue({ ...e, mediaType: D.IMAGE, label: "uploadFileToWeixin" });
+async function lt(e) {
+  return ye({ ...e, mediaType: q.IMAGE, label: "uploadFileToWeixin" });
 }
-async function at(e) {
-  return ue({ ...e, mediaType: D.VIDEO, label: "uploadVideoToWeixin" });
+async function gt(e) {
+  return ye({ ...e, mediaType: q.VIDEO, label: "uploadVideoToWeixin" });
 }
-async function ct(e) {
-  return ue({ ...e, mediaType: D.FILE, label: "uploadFileAttachmentToWeixin" });
+async function ut(e) {
+  return ye({ ...e, mediaType: q.FILE, label: "uploadFileAttachmentToWeixin" });
 }
-async function dt(e) {
+async function pt(e) {
   let { filePath: t, to: n, text: r, opts: i, cdnBaseUrl: o } = e, c = j(t), a = { baseUrl: i.baseUrl, token: i.token };
   if (c.startsWith("video/")) {
     s.info(`[weixin] sendWeixinMediaFile: uploading video filePath=${t} to=${n}`);
-    let g = await at({ filePath: t, toUserId: n, opts: a, cdnBaseUrl: o });
-    return s.info(`[weixin] sendWeixinMediaFile: video upload done filekey=${g.filekey} size=${g.fileSize}`), He({ to: n, text: r, uploaded: g, opts: i });
+    let g = await gt({ filePath: t, toUserId: n, opts: a, cdnBaseUrl: o });
+    return s.info(`[weixin] sendWeixinMediaFile: video upload done filekey=${g.filekey} size=${g.fileSize}`), tt({ to: n, text: r, uploaded: g, opts: i });
   }
   if (c.startsWith("image/")) {
     s.info(`[weixin] sendWeixinMediaFile: uploading image filePath=${t} to=${n}`);
-    let g = await st({ filePath: t, toUserId: n, opts: a, cdnBaseUrl: o });
-    return s.info(`[weixin] sendWeixinMediaFile: image upload done filekey=${g.filekey} size=${g.fileSize}`), Xe({ to: n, text: r, uploaded: g, opts: i });
+    let g = await lt({ filePath: t, toUserId: n, opts: a, cdnBaseUrl: o });
+    return s.info(`[weixin] sendWeixinMediaFile: image upload done filekey=${g.filekey} size=${g.fileSize}`), et({ to: n, text: r, uploaded: g, opts: i });
   }
-  let d = Yt.basename(t);
+  let d = rn.basename(t);
   s.info(`[weixin] sendWeixinMediaFile: uploading file attachment filePath=${t} name=${d} to=${n}`);
-  let l = await ct({ filePath: t, fileName: d, toUserId: n, opts: a, cdnBaseUrl: o });
-  return s.info(`[weixin] sendWeixinMediaFile: file upload done filekey=${l.filekey} size=${l.fileSize}`), Ye({ to: n, text: r, fileName: d, uploaded: l, opts: i });
+  let l = await ut({ filePath: t, fileName: d, toUserId: n, opts: a, cdnBaseUrl: o });
+  return s.info(`[weixin] sendWeixinMediaFile: file upload done filekey=${l.filekey} size=${l.fileSize}`), nt({ to: n, text: r, fileName: d, uploaded: l, opts: i });
 }
-async function lt(e, t) {
+async function mt(e, t) {
   let n;
   try {
     n = await fetch(e);
@@ -23418,7 +23460,7 @@ async function lt(e, t) {
   }
   return Buffer.from(await n.arrayBuffer());
 }
-function Zt(e, t) {
+function on(e, t) {
   let n = Buffer.from(e, "base64");
   if (n.length === 16)
     return n;
@@ -23427,45 +23469,45 @@ function Zt(e, t) {
   let r = `${t}: aes_key must decode to 16 raw bytes or 32-char hex string, got ${n.length} bytes (base64="${e}")`;
   throw s.error(r), new Error(r);
 }
-async function T(e, t, n, r) {
-  let i = Zt(t, r), o = ge(e, n);
+async function v(e, t, n, r) {
+  let i = on(t, r), o = me(e, n);
   s.debug(`${r}: fetching url=${o}`);
-  let c = await lt(o, r);
+  let c = await mt(o, r);
   s.debug(`${r}: downloaded ${c.byteLength} bytes, decrypting`);
-  let a = nt(c, i);
+  let a = st(c, i);
   return s.debug(`${r}: decrypted ${a.length} bytes`), a;
 }
-async function gt(e, t, n) {
-  let r = ge(e, t);
-  return s.debug(`${n}: fetching url=${r}`), lt(r, n);
+async function ft(e, t, n) {
+  let r = me(e, t);
+  return s.debug(`${n}: fetching url=${r}`), mt(r, n);
 }
-var pt = 24000;
-function en(e, t) {
+var yt = 24000;
+function sn(e, t) {
   let n = e.byteLength, r = 44 + n, i = Buffer.allocUnsafe(r), o = 0;
   return i.write("RIFF", o), o += 4, i.writeUInt32LE(r - 8, o), o += 4, i.write("WAVE", o), o += 4, i.write("fmt ", o), o += 4, i.writeUInt32LE(16, o), o += 4, i.writeUInt16LE(1, o), o += 2, i.writeUInt16LE(1, o), o += 2, i.writeUInt32LE(t, o), o += 4, i.writeUInt32LE(t * 2, o), o += 4, i.writeUInt16LE(2, o), o += 2, i.writeUInt16LE(16, o), o += 2, i.write("data", o), o += 4, i.writeUInt32LE(n, o), o += 4, Buffer.from(e.buffer, e.byteOffset, e.byteLength).copy(i, o), i;
 }
-async function ut(e) {
+async function xt(e) {
   try {
     let { decode: t } = await Promise.resolve().then(() => (init_lib(), exports_lib));
     s.debug(`silkToWav: decoding ${e.length} bytes of SILK`);
-    let n = await t(e, pt);
+    let n = await t(e, yt);
     s.debug(`silkToWav: decoded duration=${n.duration}ms pcmBytes=${n.data.byteLength}`);
-    let r = en(n.data, pt);
+    let r = sn(n.data, yt);
     return s.debug(`silkToWav: WAV size=${r.length}`), r;
   } catch (t) {
     return s.warn(`silkToWav: transcode failed, will use raw silk err=${String(t)}`), null;
   }
 }
-var mt = 104857600;
-async function U(e, t, n, r, i) {
-  if (t.length > mt)
-    throw new Error(`media too large: ${t.length} bytes (max ${mt})`);
-  let o = w.join(e, "media", "inbound");
-  await S.mkdir(o, { recursive: true });
-  let c = i ?? (r ? w.extname(r) : n ? Ze(n) : ".bin"), a = de("wx-inbound", c), d = w.join(o, a);
-  return await S.writeFile(d, t), { path: d };
+var bt = 104857600;
+async function M(e, t, n, r, i) {
+  if (t.length > bt)
+    throw new Error(`media too large: ${t.length} bytes (max ${bt})`);
+  let o = I.join(e, "media", "inbound");
+  await E.mkdir(o, { recursive: true });
+  let c = i ?? (r ? I.extname(r) : n ? it(n) : ".bin"), a = ue("wx-inbound", c), d = I.join(o, a);
+  return await E.writeFile(d, t), { path: d };
 }
-async function ft(e, t) {
+async function _t(e, t) {
   let { cdnBaseUrl: n, errLog: r, label: i, tempDir: o } = t, c = {};
   if (e.type === m.IMAGE) {
     let a = e.image_item;
@@ -23474,8 +23516,8 @@ async function ft(e, t) {
     let d = a.aeskey ? Buffer.from(a.aeskey, "hex").toString("base64") : a.media.aes_key;
     s.debug(`${i} image: encrypt_query_param=${a.media.encrypt_query_param.slice(0, 40)}... hasAesKey=${!!d} aeskeySource=${a.aeskey ? "image_item.aeskey" : "media.aes_key"}`);
     try {
-      let l = d ? await T(a.media.encrypt_query_param, d, n, `${i} image`) : await gt(a.media.encrypt_query_param, n, `${i} image-plain`), g = et(l), p = await U(o, l, undefined, undefined, g);
-      c.decryptedPicPath = p.path, s.debug(`${i} image saved: ${p.path}`);
+      let l = d ? await v(a.media.encrypt_query_param, d, n, `${i} image`) : await ft(a.media.encrypt_query_param, n, `${i} image-plain`), g = rt(l), u = await M(o, l, undefined, undefined, g);
+      c.decryptedPicPath = u.path, s.debug(`${i} image saved: ${u.path}`);
     } catch (l) {
       s.error(`${i} image download/decrypt failed: ${String(l)}`), r(`weixin ${i} image download/decrypt failed: ${String(l)}`);
     }
@@ -23484,14 +23526,14 @@ async function ft(e, t) {
     if (!a?.media?.encrypt_query_param || !a.media.aes_key)
       return c;
     try {
-      let d = await T(a.media.encrypt_query_param, a.media.aes_key, n, `${i} voice`);
+      let d = await v(a.media.encrypt_query_param, a.media.aes_key, n, `${i} voice`);
       s.debug(`${i} voice: decrypted ${d.length} bytes, attempting silk transcode`);
-      let l = await ut(d);
+      let l = await xt(d);
       if (l) {
-        let g = await U(o, l, "audio/wav");
+        let g = await M(o, l, "audio/wav");
         c.decryptedVoicePath = g.path, c.voiceMediaType = "audio/wav", s.debug(`${i} voice: saved WAV to ${g.path}`);
       } else {
-        let g = await U(o, d, "audio/silk");
+        let g = await M(o, d, "audio/silk");
         c.decryptedVoicePath = g.path, c.voiceMediaType = "audio/silk", s.debug(`${i} voice: silk transcode unavailable, saved raw SILK to ${g.path}`);
       }
     } catch (d) {
@@ -23502,7 +23544,7 @@ async function ft(e, t) {
     if (!a?.media?.encrypt_query_param || !a.media.aes_key)
       return c;
     try {
-      let d = await T(a.media.encrypt_query_param, a.media.aes_key, n, `${i} file`), l = j(a.file_name ?? "file.bin"), g = await U(o, d, l, a.file_name ?? undefined);
+      let d = await v(a.media.encrypt_query_param, a.media.aes_key, n, `${i} file`), l = j(a.file_name ?? "file.bin"), g = await M(o, d, l, a.file_name ?? undefined);
       c.decryptedFilePath = g.path, c.fileMediaType = l, s.debug(`${i} file: saved to ${g.path} mime=${l}`);
     } catch (d) {
       s.error(`${i} file download failed: ${String(d)}`), r(`weixin ${i} file download failed: ${String(d)}`);
@@ -23512,7 +23554,7 @@ async function ft(e, t) {
     if (!a?.media?.encrypt_query_param || !a.media.aes_key)
       return c;
     try {
-      let d = await T(a.media.encrypt_query_param, a.media.aes_key, n, `${i} video`), l = await U(o, d, "video/mp4");
+      let d = await v(a.media.encrypt_query_param, a.media.aes_key, n, `${i} video`), l = await M(o, d, "video/mp4");
       c.decryptedVideoPath = l.path, s.debug(`${i} video: saved to ${l.path}`);
     } catch (d) {
       s.error(`${i} video download failed: ${String(d)}`), r(`weixin ${i} video download failed: ${String(d)}`);
@@ -23520,66 +23562,66 @@ async function ft(e, t) {
   }
   return c;
 }
-async function yt(e) {
-  let t = [w.join(e, "media", "inbound"), w.join(e, "media", "outbound")], n = 86400000, r = Date.now();
+async function ht(e) {
+  let t = [I.join(e, "media", "inbound"), I.join(e, "media", "outbound")], n = 86400000, r = Date.now();
   for (let i of t)
     try {
-      let o = await S.readdir(i);
+      let o = await E.readdir(i);
       for (let c of o) {
-        let a = w.join(i, c), d = await S.stat(a);
-        r - d.mtimeMs > n && (await S.unlink(a), s.debug(`cleaned up temp file: ${a}`));
+        let a = I.join(i, c), d = await E.stat(a);
+        r - d.mtimeMs > n && (await E.unlink(a), s.debug(`cleaned up temp file: ${a}`));
       }
     } catch {}
 }
-var tn = 35000;
+var an = 35000;
 var K = 3;
-var xt = 30000;
-var _t = 2000;
-async function bt(e) {
+var wt = 30000;
+var kt = 2000;
+async function $t(e) {
   let { baseUrl: t, cdnBaseUrl: n, token: r, accountId: i, allowedUserId: o, abortSignal: c, callbacks: a, tempDir: d } = e, l = s.withAccount(i);
   l.info(`poll-loop started: baseUrl=${t}`), a.onStatusChange(true);
-  let g = M(i), p = be(g) ?? "";
-  p && l.info(`resuming from previous sync buf (${p.length} bytes)`);
-  let u = tn, y = 0;
+  let g = A(i), u = ke(g) ?? "";
+  u && l.info(`resuming from previous sync buf (${u.length} bytes)`);
+  let p = an, y = 0;
   for (;!c?.aborted; )
     try {
-      let f = await qe({ baseUrl: t, token: r, get_updates_buf: p, timeoutMs: u });
-      if (f.longpolling_timeout_ms != null && f.longpolling_timeout_ms > 0 && (u = f.longpolling_timeout_ms), f.ret !== undefined && f.ret !== 0 || f.errcode !== undefined && f.errcode !== 0) {
-        if (f.errcode === ne || f.ret === ne) {
-          O(i), a.onStatusChange(false), l.error("session expired, pausing poll-loop. Please re-login."), await a.onSessionExpired(i);
+      let f = await qe({ baseUrl: t, token: r, get_updates_buf: u, timeoutMs: p });
+      if (f.longpolling_timeout_ms != null && f.longpolling_timeout_ms > 0 && (p = f.longpolling_timeout_ms), f.ret !== undefined && f.ret !== 0 || f.errcode !== undefined && f.errcode !== 0) {
+        if (f.errcode === re || f.ret === re) {
+          D(i), a.onStatusChange(false), l.error("session expired, pausing poll-loop. Please re-login."), await a.onSessionExpired(i);
           return;
         }
-        y += 1, l.error(`getUpdates failed: ret=${f.ret} errcode=${f.errcode} (${y}/${K})`), y >= K ? (y = 0, await Q(xt, c)) : await Q(_t, c);
+        y += 1, l.error(`getUpdates failed: ret=${f.ret} errcode=${f.errcode} (${y}/${K})`), y >= K ? (y = 0, await Q(wt, c)) : await Q(kt, c);
         continue;
       }
-      y = 0, f.get_updates_buf != null && f.get_updates_buf !== "" && (he(g, f.get_updates_buf), p = f.get_updates_buf);
-      let $t = f.msgs ?? [];
-      for (let ye of $t)
-        await nn(ye, { baseUrl: t, cdnBaseUrl: n, token: r, accountId: i, allowedUserId: o, callbacks: a, tempDir: d });
+      y = 0, f.get_updates_buf != null && f.get_updates_buf !== "" && ($e(g, f.get_updates_buf), u = f.get_updates_buf);
+      let St = f.msgs ?? [];
+      for (let _e of St)
+        await cn(_e, { baseUrl: t, cdnBaseUrl: n, token: r, accountId: i, allowedUserId: o, callbacks: a, tempDir: d });
     } catch (f) {
       if (c?.aborted)
         break;
-      y += 1, l.error(`getUpdates error: ${String(f)} (${y}/${K})`), y >= K ? (y = 0, await Q(xt, c)) : await Q(_t, c);
+      y += 1, l.error(`getUpdates error: ${String(f)} (${y}/${K})`), y >= K ? (y = 0, await Q(wt, c)) : await Q(kt, c);
     }
   a.onStatusChange(false), l.info("poll-loop ended");
 }
-async function nn(e, t) {
+async function cn(e, t) {
   let n = e.from_user_id ?? "";
   if (n !== t.allowedUserId) {
     s.debug(`dropping message from ${n} (allowed: ${t.allowedUserId})`);
     return;
   }
-  e.context_token && N(n, e.context_token);
-  let r = ce(e.item_list), i = rn(e.item_list), o = i ? undefined : on(e.item_list), c = i ?? o, a = {};
-  c && (a = await ft(c, { cdnBaseUrl: t.cdnBaseUrl, log: (p) => s.info(p), errLog: (p) => s.error(p), label: "inbound", tempDir: t.tempDir }));
+  e.context_token && Je(n, e.context_token);
+  let r = ge(e.item_list), i = dn(e.item_list), o = i ? undefined : ln(e.item_list), c = i ?? o, a = {};
+  c && (a = await _t(c, { cdnBaseUrl: t.cdnBaseUrl, log: (u) => s.info(u), errLog: (u) => s.error(u), label: "inbound", tempDir: t.tempDir }));
   let d = a.decryptedPicPath ?? a.decryptedVideoPath ?? a.decryptedFilePath ?? a.decryptedVoicePath, l = a.decryptedPicPath ? "image/*" : a.decryptedVideoPath ? "video/mp4" : a.fileMediaType ?? a.voiceMediaType, g = { chatId: n, text: r || "[\u5A92\u4F53\u6D88\u606F]", raw: e, media: Object.keys(a).length > 0 ? a : undefined, mediaPath: d, mediaType: l };
   await t.callbacks.onMessage(g);
 }
-function rn(e) {
+function dn(e) {
   return e?.find((t) => t.type === m.IMAGE && t.image_item?.media?.encrypt_query_param) ?? e?.find((t) => t.type === m.VIDEO && t.video_item?.media?.encrypt_query_param) ?? e?.find((t) => t.type === m.FILE && t.file_item?.media?.encrypt_query_param) ?? e?.find((t) => t.type === m.VOICE && t.voice_item?.media?.encrypt_query_param && !t.voice_item.text);
 }
-function on(e) {
-  return e?.find((n) => n.type === m.TEXT && n.ref_msg?.message_item && ae(n.ref_msg.message_item))?.ref_msg?.message_item ?? undefined;
+function ln(e) {
+  return e?.find((n) => n.type === m.TEXT && n.ref_msg?.message_item && le(n.ref_msg.message_item))?.ref_msg?.message_item ?? undefined;
 }
 function Q(e, t) {
   return new Promise((n, r) => {
@@ -23589,7 +23631,7 @@ function Q(e, t) {
     }, { once: true });
   });
 }
-var me = class extends sn {
+var xe = class extends gn {
   config;
   currentAccount;
   pollAbortController;
@@ -23599,12 +23641,12 @@ var me = class extends sn {
   configManager;
   constructor(t) {
     super();
-    let n = t?.stateDir ?? wt.join(ht.homedir(), ".weixin-bot"), r = t?.tempDir ?? wt.join(ht.tmpdir(), "weixin-bot"), i = t?.clientIdPrefix ?? "weixin-bot";
-    this.config = { stateDir: n, tempDir: r, channelVersion: t?.channelVersion, clientIdPrefix: i }, $e(n), _e(n), t?.channelVersion && Fe(t.channelVersion);
+    let n = t?.stateDir ?? Tt.join(It.homedir(), ".weixin-bot"), r = t?.tempDir ?? Tt.join(It.tmpdir(), "weixin-bot"), i = t?.clientIdPrefix ?? "weixin-bot";
+    this.config = { stateDir: n, tempDir: r, channelVersion: t?.channelVersion, clientIdPrefix: i }, we(n), t?.channelVersion && Be(t.channelVersion);
   }
   async start(t) {
     if (!t) {
-      let i = h();
+      let i = w();
       if (i.length === 0)
         return s.warn("WeixinBotClient.start: no registered accounts found"), false;
       t = i[0];
@@ -23612,15 +23654,15 @@ var me = class extends sn {
     let n = Me(t);
     if (!n.configured || !n.userId)
       return s.warn(`WeixinBotClient.start: account ${t} not configured or missing userId`), false;
-    this.currentAccount = n, this.configManager = new F({ baseUrl: n.baseUrl, token: n.token }, (i) => s.info(i)), this.pollAbortController = new AbortController;
+    this.currentAccount = n, this.configManager = new O({ baseUrl: n.baseUrl, token: n.token }, (i) => s.info(i)), Qe(n.accountId), this.pollAbortController = new AbortController;
     let r = { baseUrl: n.baseUrl, cdnBaseUrl: n.cdnBaseUrl, token: n.token, accountId: n.accountId, allowedUserId: n.userId, abortSignal: this.pollAbortController.signal, tempDir: this.config.tempDir, callbacks: { onMessage: async (i) => {
-      N(i.chatId, i.raw.context_token), this.lastInboundAt = Date.now(), this.emit("message", i);
+      this.lastInboundAt = Date.now(), this.emit("message", i);
     }, onSessionExpired: async (i) => {
-      O(i), this.stopAllTyping(), this.pollLoopRunning = false, this.emit("sessionExpired", i);
+      D(i), this.stopAllTyping(), this.pollLoopRunning = false, this.emit("sessionExpired", i);
     }, onStatusChange: (i) => {
       this.pollLoopRunning = i;
     } } };
-    return bt(r).catch((i) => {
+    return $t(r).catch((i) => {
       s.error(`WeixinBotClient: poll-loop error: ${String(i)}`), this.pollLoopRunning = false, this.emit("error", i);
     }), true;
   }
@@ -23628,7 +23670,7 @@ var me = class extends sn {
     this.pollAbortController?.abort(), this.stopAllTyping(), this.pollLoopRunning = false, this.currentAccount = undefined;
   }
   async login() {
-    let t = this.currentAccount?.baseUrl ?? J, n = await Le({ apiBaseUrl: t, botType: L }), r;
+    let t = this.currentAccount?.baseUrl ?? X, n = await Le({ apiBaseUrl: t, botType: W }), r;
     if (n.qrcodeUrl)
       try {
         let o = await Promise.resolve().then(() => __toESM(require_main(), 1));
@@ -23639,7 +23681,7 @@ var me = class extends sn {
     let { sessionKey: i } = n;
     return (async () => {
       try {
-        let o = await Ce({ sessionKey: i, apiBaseUrl: t, timeoutMs: 480000, onQrRefresh: async (c) => {
+        let o = await We({ sessionKey: i, apiBaseUrl: t, timeoutMs: 480000, onQrRefresh: async (c) => {
           let a;
           try {
             let d = await Promise.resolve().then(() => __toESM(require_main(), 1));
@@ -23650,8 +23692,8 @@ var me = class extends sn {
           this.emit("qrRefresh", { qrcodeUrl: c, qrAscii: a });
         } });
         if (o.connected && o.accountId) {
-          let c = ke(o.accountId);
-          Se(c, { token: o.botToken, baseUrl: o.baseUrl, userId: o.userId }), Ie(c), Ve(c), this.emit("loginSuccess", c), await this.start(c);
+          let c = Ie(o.accountId);
+          Ue(c, { token: o.botToken, baseUrl: o.baseUrl, userId: o.userId }), Te(c), Ve(c), this.emit("loginSuccess", c), await this.start(c);
         }
       } catch (o) {
         s.warn(`WeixinBotClient.login: waitForWeixinLogin failed: ${String(o)}`), this.emit("error", o);
@@ -23660,46 +23702,44 @@ var me = class extends sn {
   }
   async logout() {
     this.stop();
-    let t = h();
+    let t = w();
     if (t.length > 0) {
       let n = t[0];
-      ve(n);
+      Ge(n), ve(n);
     }
   }
   listAccounts() {
-    return h();
+    return w();
   }
   async sendText(t, n, r) {
     if (!this.currentAccount)
       throw new Error("WeixinBotClient: not started, call start() first");
-    let i = I(t);
-    if (!i)
-      throw new Error(`WeixinBotClient.sendText: no contextToken for chatId=${t}`);
+    let i = U(t);
+    i || s.warn(`WeixinBotClient.sendText: no contextToken for chatId=${t}, sending without context`);
     let o = r?.raw !== true ? z2(n) : n;
-    await Je({ to: t, text: o, opts: { baseUrl: this.currentAccount.baseUrl, token: this.currentAccount.token, contextToken: i, clientIdPrefix: this.config.clientIdPrefix } });
+    await Ze({ to: t, text: o, opts: { baseUrl: this.currentAccount.baseUrl, token: this.currentAccount.token, contextToken: i, clientIdPrefix: this.config.clientIdPrefix } });
   }
   async sendMedia(t, n, r) {
     if (!this.currentAccount)
       throw new Error("WeixinBotClient: not started, call start() first");
-    let i = I(t);
-    if (!i)
-      throw new Error(`WeixinBotClient.sendMedia: no contextToken for chatId=${t}`);
+    let i = U(t);
+    i || s.warn(`WeixinBotClient.sendMedia: no contextToken for chatId=${t}, sending without context`);
     let o = r ? z2(r) : "";
-    await dt({ filePath: n, to: t, text: o, opts: { baseUrl: this.currentAccount.baseUrl, token: this.currentAccount.token, contextToken: i, clientIdPrefix: this.config.clientIdPrefix }, cdnBaseUrl: this.currentAccount.cdnBaseUrl });
+    await pt({ filePath: n, to: t, text: o, opts: { baseUrl: this.currentAccount.baseUrl, token: this.currentAccount.token, contextToken: i, clientIdPrefix: this.config.clientIdPrefix }, cdnBaseUrl: this.currentAccount.cdnBaseUrl });
   }
   startTyping(t) {
     if (this.stopTyping(t), !this.currentAccount || !this.configManager)
       return;
     let n = this.currentAccount;
-    this.configManager.getForUser(t, I(t)).then((i) => {
+    this.configManager.getForUser(t, U(t)).then((i) => {
       if (!i.typingTicket)
         return;
       let o = i.typingTicket;
-      C({ baseUrl: n.baseUrl, token: n.token, body: { ilink_user_id: t, typing_ticket: o, status: q.TYPING } }).catch((a) => {
+      F({ baseUrl: n.baseUrl, token: n.token, body: { ilink_user_id: t, typing_ticket: o, status: N.TYPING } }).catch((a) => {
         s.warn(`startTyping: initial send failed: ${String(a)}`);
       });
       let c = setInterval(() => {
-        C({ baseUrl: n.baseUrl, token: n.token, body: { ilink_user_id: t, typing_ticket: o, status: q.TYPING } }).catch((a) => {
+        F({ baseUrl: n.baseUrl, token: n.token, body: { ilink_user_id: t, typing_ticket: o, status: N.TYPING } }).catch((a) => {
           s.warn(`startTyping: interval send failed: ${String(a)}`);
         });
       }, 5000);
@@ -23712,8 +23752,8 @@ var me = class extends sn {
     let n = this.typingStates.get(t);
     if (n && (clearInterval(n.timer), this.typingStates.delete(t), this.currentAccount && this.configManager)) {
       let r = this.currentAccount;
-      this.configManager.getForUser(t, I(t)).then((i) => {
-        i.typingTicket && C({ baseUrl: r.baseUrl, token: r.token, body: { ilink_user_id: t, typing_ticket: i.typingTicket, status: q.CANCEL } }).catch((o) => {
+      this.configManager.getForUser(t, U(t)).then((i) => {
+        i.typingTicket && F({ baseUrl: r.baseUrl, token: r.token, body: { ilink_user_id: t, typing_ticket: i.typingTicket, status: N.CANCEL } }).catch((o) => {
           s.warn(`stopTyping: send cancel failed: ${String(o)}`);
         });
       }).catch((i) => {
@@ -23729,7 +23769,7 @@ var me = class extends sn {
     return { connected: this.pollLoopRunning && this.currentAccount != null, accountId: this.currentAccount?.accountId, userId: this.currentAccount?.userId, sessionPaused: this.currentAccount ? je(this.currentAccount.accountId) : false, lastInboundAt: this.lastInboundAt, pollLoopRunning: this.pollLoopRunning };
   }
   async cleanupTempMedia() {
-    return yt(this.config.tempDir);
+    return ht(this.config.tempDir);
   }
 };
 // node_modules/@modelcontextprotocol/sdk/dist/esm/server/zod-compat.js
@@ -25324,7 +25364,7 @@ function log2(msg) {
 }
 async function main() {
   log2("weixin-claude-code channel starting...");
-  const client = new me({
+  const client = new xe({
     stateDir: path.join(os.homedir(), ".claude", "channels", "wechat"),
     tempDir: path.join(os.tmpdir(), "weixin-claude-code"),
     clientIdPrefix: "openclaw-weixin"
@@ -25372,9 +25412,15 @@ async function main() {
       meta3.media_path = msg.mediaPath;
     if (msg.mediaType)
       meta3.media_type = msg.mediaType;
+    let content = msg.text;
+    if (msg.mediaPath) {
+      const mt2 = msg.mediaType ?? "";
+      const label = mt2.startsWith("image") ? "\u56FE\u7247" : mt2.startsWith("video") ? "\u89C6\u9891" : mt2.startsWith("audio") ? "\u8BED\u97F3" : mt2 ? "\u6587\u4EF6" : "\u5A92\u4F53\u6D88\u606F";
+      content = `[${label}: ${path.basename(msg.mediaPath)}]`;
+    }
     await server.notification({
       method: "notifications/claude/channel",
-      params: { content: msg.text || "[\u5A92\u4F53\u6D88\u606F]", meta: meta3 }
+      params: { content, meta: meta3 }
     });
   });
   client.on("sessionExpired", async (accountId) => {
